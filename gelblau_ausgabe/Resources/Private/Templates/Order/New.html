@@ -10,6 +10,7 @@
           <f:if condition="{newOrder.ausgabe}">
             <h4>{newOrder.ausgabe.name}</h4>
             <f:image src="{newOrder.ausgabe.frontImage.originalResource.publicUrl}" class="img-responsive" width="130"/>
+            <f:form.hidden property="ausgabe" value="{newOrder.ausgabe}" />
           </f:if>
         </div>
       </div>
