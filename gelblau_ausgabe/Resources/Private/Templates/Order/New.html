@@ -9,8 +9,7 @@
         <div class="modal-body">
           <f:if condition="{newOrder.ausgabe}">
             <h4>{newOrder.ausgabe.name}</h4>
-            <f:image src="{newOrder.ausgabe.frontImage.originalResource.publicUrl}" class="img-responsive" />
-            <f:form.textfield property="ausgabeAmount" type="number" class="form-control" id="ausgabeAmount" />
+            <f:image src="{newOrder.ausgabe.frontImage.originalResource.publicUrl}" class="img-responsive" width="130"/>
           </f:if>
         </div>
       </div>
@@ -36,10 +35,25 @@
       </div>
       <div class="col-lg-4">
         <div class="modal-body">
-          <div class="form-group">
-            <label for="money" style="float:left;margin-right:5px;">Сума: €</label>
-            <div class="input-group">
-              <f:form.textfield property="money" type="number" class="form-control" style="height:20px;" id="money" />
+          <f:if condition="{newOrder.ausgabe}">
+            <div class="form-group row">
+              <label for="ausgabeAmount" class="col-lg-5 col-form-label">Кількість: шт.</label>
+              <div class="col-lg-4">
+                <f:form.textfield property="ausgabeAmount" type="number" class="form-control" id="ausgabeAmount" style="height:20px;" />
+              </div>
+            </div>
+          </f:if>
+          <div class="form-group row">
+            <label for="money" class="col-lg-5 col-form-label">Сума: €</label>
+            <div class="col-lg-4">
+              <f:if condition="{newOrder.ausgabe}">
+                <f:then>
+                  <f:form.textfield property="money" type="number" class="form-control" id="money" style="height:20px;" readonly="true"/>
+                </f:then>
+                <f:else>
+                  <f:form.textfield property="money" type="number" class="form-control" id="money" style="height:20px;"/>
+                </f:else>
+              </f:if>
             </div>
           </div>
           <div class="form-check">

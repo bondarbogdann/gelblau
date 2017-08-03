@@ -777,9 +777,13 @@ img::-moz-selection {
 body {
   webkit-tap-highlight-color: #fed136;
 }
-
 .alert-downloaded {
   color: #ffffff;
   background-color: #A5D4EA;
   border-color: #7CC4E7;
 }
+.modal-body h4 {
+  margin-top: 0;
+}
+
+
