@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2017-08-03T17:02:29Z" product-name="gelblau_ausgabe">
+		<header/>
+		<body>
+			<trans-unit id="date.description">
+				<source>date</source>
+			</trans-unit>
+			<trans-unit id="money.description">
+				<source>money</source>
+			</trans-unit>
+			<trans-unit id="invoice.description">
+				<source>invoice</source>
+			</trans-unit>
+			<trans-unit id="ausgabe_amount.description">
+				<source>ausgabeAmount</source>
+			</trans-unit>
+			<trans-unit id="client_name.description">
+				<source>clientName</source>
+			</trans-unit>
+			<trans-unit id="client_email.description">
+				<source>clientEmail</source>
+			</trans-unit>
+			<trans-unit id="client_address.description">
+				<source>clientAddress</source>
+			</trans-unit>
+			<trans-unit id="ausgabe.description">
+				<source>Ausgabe</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

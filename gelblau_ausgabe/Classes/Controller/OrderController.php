@@ -1,0 +1,68 @@
+<?php
+namespace Gelblau\GelblauAusgabe\Controller;
+
+/***
+ *
+ * This file is part of the "Gelblau Ausgabe" Extension for TYPO3 CMS.
+ *
+ * For the full copyright and license information, please read the
+ * LICENSE.txt file that was distributed with this source code.
+ *
+ *  (c) 2017
+ *
+ ***/
+
+/**
+ * OrderController
+ */
+class OrderController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
+{
+    /**
+     * orderRepository
+     *
+     * @var \Gelblau\GelblauAusgabe\Domain\Repository\OrderRepository
+     * @inject
+     */
+    protected $orderRepository = null;
+
+    /**
+     * action new
+     *
+     * @return void
+     */
+    public function newAction()
+    {
+        $hasMoney = $this->request->hasArgument('money');
+        $hasAusgabe = $this->request->hasArgument('ausgabe');
+
+        if ($hasMoney || $hasAusgabe) {
+            $newOrder = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\Gelblau\GelblauAusgabe\Domain\Model\Order::class);
+            
+            if ($hasMoney) {
+                $newOrder->setMoney($this->request->getArgument('money'));
+            }
+            
+            if ($hasAusgabe) {
+                $ausgabe = $this->request->getArgument('ausgabe');
+                $newOrder->setMoney($ausgabe->getPrice());
+                $newOrder->setAusgabe($ausgabe);
+                $newOrder->setAusgabeAmount(1);
+            }
+            
+            $this->view->assign('newOrder', $newOrder);
+        }
+    }
+
+    /**
+     * action create
+     *
+     * @param \Gelblau\GelblauAusgabe\Domain\Model\Order $newOrder
+     * @return void
+     */
+    public function createAction(\Gelblau\GelblauAusgabe\Domain\Model\Order $newOrder)
+    {
+        $newOrder->setDate(new \DateTime());
+        $this->orderRepository->add($newOrder);
+        $this->redirect('list', 'Ausgabe');
+    }
+}

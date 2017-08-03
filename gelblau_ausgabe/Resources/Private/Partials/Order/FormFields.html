@@ -1,0 +1,30 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<label for="date">
+	<f:translate key="tx_gelblauausgabe_domain_model_order.date" />
+</label><br />
+	<f:form.textfield property="date" value="{order.date->f:format.date()}" /><br />
+<label for="money">
+	<f:translate key="tx_gelblauausgabe_domain_model_order.money" />
+</label><br />
+	<f:form.textfield property="money" /><br />
+<label for="invoice">
+	<f:translate key="tx_gelblauausgabe_domain_model_order.invoice" />
+</label><br />
+	<f:form.checkbox property="invoice" value="1" /><br />
+<label for="ausgabeAmount">
+	<f:translate key="tx_gelblauausgabe_domain_model_order.ausgabe_amount" />
+</label><br />
+	<f:form.textfield property="ausgabeAmount" /><br />
+<label for="clientName">
+	<f:translate key="tx_gelblauausgabe_domain_model_order.client_name" />
+</label><br />
+	<f:form.textfield property="clientName" /><br />
+<label for="clientEmail">
+	<f:translate key="tx_gelblauausgabe_domain_model_order.client_email" />
+</label><br />
+	<f:form.textfield property="clientEmail" /><br />
+<label for="clientAddress">
+	<f:translate key="tx_gelblauausgabe_domain_model_order.client_address" />
+</label><br />
+	<f:form.textfield property="clientAddress" /><br />
+</html>

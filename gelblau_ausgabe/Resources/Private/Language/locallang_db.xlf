@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2017-08-03T17:02:29Z" product-name="gelblau_ausgabe">
+		<header/>
+		<body>
+			<trans-unit id="tx_gelblauausgabe_domain_model_ausgabe">
+				<source>Ausgabe</source>
+			</trans-unit>
+			<trans-unit id="tx_gelblauausgabe_domain_model_ausgabe.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_gelblauausgabe_domain_model_ausgabe.front_image">
+				<source>Front Image</source>
+			</trans-unit>
+			<trans-unit id="tx_gelblauausgabe_domain_model_ausgabe.date">
+				<source>Date</source>
+			</trans-unit>
+			<trans-unit id="tx_gelblauausgabe_domain_model_ausgabe.pdf">
+				<source>Pdf</source>
+			</trans-unit>
+			<trans-unit id="tx_gelblauausgabe_domain_model_ausgabe.content">
+				<source>Content</source>
+			</trans-unit>
+			<trans-unit id="tx_gelblauausgabe_domain_model_ausgabe.download_count">
+				<source>Download Count</source>
+			</trans-unit>
+			<trans-unit id="tx_gelblauausgabe_domain_model_ausgabe.amount_left">
+				<source>Amount Left</source>
+			</trans-unit>
+			<trans-unit id="tx_gelblauausgabe_domain_model_ausgabe.preview_images">
+				<source>Preview Images</source>
+			</trans-unit>
+			<trans-unit id="tx_gelblauausgabe_domain_model_ausgabe.price">
+				<source>Price</source>
+			</trans-unit>
+			<trans-unit id="tx_gelblauausgabe_domain_model_order">
+				<source>Order</source>
+			</trans-unit>
+			<trans-unit id="tx_gelblauausgabe_domain_model_order.date">
+				<source>Date</source>
+			</trans-unit>
+			<trans-unit id="tx_gelblauausgabe_domain_model_order.money">
+				<source>Money</source>
+			</trans-unit>
+			<trans-unit id="tx_gelblauausgabe_domain_model_order.invoice">
+				<source>Invoice</source>
+			</trans-unit>
+			<trans-unit id="tx_gelblauausgabe_domain_model_order.ausgabe_amount">
+				<source>Ausgabe Amount</source>
+			</trans-unit>
+			<trans-unit id="tx_gelblauausgabe_domain_model_order.client_name">
+				<source>Client Name</source>
+			</trans-unit>
+			<trans-unit id="tx_gelblauausgabe_domain_model_order.client_email">
+				<source>Client Email</source>
+			</trans-unit>
+			<trans-unit id="tx_gelblauausgabe_domain_model_order.client_address">
+				<source>Client Address</source>
+			</trans-unit>
+			<trans-unit id="tx_gelblauausgabe_domain_model_order.ausgabe">
+				<source>Ausgabe</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

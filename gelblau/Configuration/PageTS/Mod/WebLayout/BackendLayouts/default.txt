@@ -1,0 +1,29 @@
+#
+# BACKENDLAYOUT: DEFAULT
+#
+mod {
+    web_layout {
+        BackendLayouts {
+            gelblau_default {
+                title = LLL:EXT:gelblau/Resources/Private/Language/locallang.xlf:backend_layout.default
+                config {
+                    backend_layout {
+                        colCount = 1
+                        rowCount = 1
+                        rows {
+                            1 {
+                                columns {
+                                    1 {
+                                        name = LLL:EXT:gelblau/Resources/Private/Language/locallang.xlf:backend_layout.column.normal
+                                        colPos = 0
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                icon = EXT:gelblau/Resources/Public/Images/BackendLayouts/default.png
+            }
+        }
+    }
+}

@@ -1,0 +1,7 @@
+#
+# PageTS for gelblau
+#
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:gelblau/Configuration/PageTS/RTE.txt">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:gelblau/Configuration/PageTS/TCEFORM.txt">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:gelblau/Configuration/PageTS/TCEMAIN.txt">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:gelblau/Configuration/PageTS/Mod/WebLayout/BackendLayouts.txt">

@@ -1,0 +1,49 @@
+<section id="partners">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">{data.header}</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="timeline">
+                      <f:if condition="{data.tx_mask_partners}">
+                        <f:for each="{data.tx_mask_partners}" as="partner" iteration="i">
+                          <li class="{f:if(condition:'{i.isEven}', then:'timeline-inverted')}">
+                              <div class="timeline-image">
+                                <f:if condition="{partner.tx_mask_link}">
+                                  <f:then>
+                                    <f:link.typolink parameter="{partner.tx_mask_link}" target="_blank">
+                                      <f:image image="{partner.tx_mask_logo.0}" alt="{partner.tx_mask_logo.0.alternative}" class="img-circle img-responsive" />
+                                    </f:link.typolink>
+                                  </f:then>
+                                  <f:else>
+                                    <f:image image="{partner.tx_mask_logo.0}" alt="{partner.tx_mask_logo.0.alternative}" class="img-circle img-responsive" />
+                                  </f:else>
+                                </f:if>
+                              </div>
+                              <div class="timeline-panel">
+                                  <div class="timeline-heading">
+                                    <h4>{partner.tx_mask_header}</h4>
+                                    <f:if condition="{partner.tx_mask_subheader}">
+                                      <h4 class="subheading">{partner.tx_mask_subheader}</h4>
+                                    </f:if>
+                                  </div>
+                                  <div class="timeline-body text-muted">
+                                        <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{partner.tx_mask_description}</f:format.html>
+                                  </div>
+                              </div>
+                          </li>
+                        </f:for>
+                      </f:if>
+                        <li class="timeline-inverted">
+                            <div class="timeline-image">
+                                <h4><br>Долучайтеся!</h4>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>

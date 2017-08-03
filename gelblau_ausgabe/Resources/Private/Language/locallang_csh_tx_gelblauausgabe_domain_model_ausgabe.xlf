@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2017-08-03T17:02:29Z" product-name="gelblau_ausgabe">
+		<header/>
+		<body>
+			<trans-unit id="name.description">
+				<source>name</source>
+			</trans-unit>
+			<trans-unit id="front_image.description">
+				<source>frontImage</source>
+			</trans-unit>
+			<trans-unit id="date.description">
+				<source>date</source>
+			</trans-unit>
+			<trans-unit id="pdf.description">
+				<source>pdf</source>
+			</trans-unit>
+			<trans-unit id="content.description">
+				<source>content</source>
+			</trans-unit>
+			<trans-unit id="download_count.description">
+				<source>downloadCount</source>
+			</trans-unit>
+			<trans-unit id="amount_left.description">
+				<source>amountLeft</source>
+			</trans-unit>
+			<trans-unit id="preview_images.description">
+				<source>previewImages</source>
+			</trans-unit>
+			<trans-unit id="price.description">
+				<source>price</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

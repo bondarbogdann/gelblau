@@ -1,0 +1,13 @@
+<header id="main-header" style="background-image: url('{f:uri.image(image: data.image.0)}');">
+  <div class="container">
+    <div class="intro-text">
+      <f:if condition="{data.subheader}">
+        <div class="intro-lead-in">{data.subheader}</div>
+      </f:if>
+      <f:if condition="{data.header}">
+      <div class="intro-heading">{data.header}</div>
+      </f:if>
+      <a href="fileadmin{data.media.0.originalFile.identifier}" class="page-scroll btn btn-xl" target="_blank">Актуальний Випуск</a>
+    </div>
+  </div>
+</header>

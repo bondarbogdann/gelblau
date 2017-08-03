@@ -1,0 +1,101 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+<f:section name="main">
+
+  <div class="container">
+    <f:form action="create" object="{newOrder}" objectName="newOrder">
+    <div class="row left-align">
+      <div class="col-lg-3 col-lg-offset-2">
+        <div class="modal-body">
+          <f:if condition="{newOrder.ausgabe}">
+            <h4>{newOrder.ausgabe.name}</h4>
+            <f:image src="{newOrder.ausgabe.frontImage.originalResource.publicUrl}" class="img-responsive" />
+            <f:form.textfield property="ausgabeAmount" type="number" class="form-control" id="ausgabeAmount" />
+          </f:if>
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <div class="modal-body">
+          <h4>Ваші дані:</h4>
+          <div class="form-group row">
+            <div class="col-lg-12">
+              <f:form.textfield property="clientEmail" type="email" class="form-control" id="email" placeholder="Email" />
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-lg-12">
+              <f:form.textfield property="clientName" type="text" class="form-control" id="name" placeholder="Ім'я та Прізвище" />
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-lg-12">
+              <f:form.textfield property="clientAddress" type="text" class="form-control" id="address" placeholder="Адреса" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="money" style="float:left;margin-right:5px;">Сума: €</label>
+            <div class="input-group">
+              <f:form.textfield property="money" type="number" class="form-control" style="height:20px;" id="money" />
+            </div>
+          </div>
+          <div class="form-check">
+            <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="exampleRadios" id="sofortRadio" value="option2" checked />
+                                <f:image src="EXT:gelblau_ausgabe/Resources/Public/Images/sofort.png" />
+                            </label>
+          </div>
+          <div class="form-check">
+            <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="exampleRadios" id="paypalRadio" value="option1" />
+                                <f:image src="EXT:gelblau_ausgabe/Resources/Public/Images/paypal.png" />
+                            </label>
+          </div>
+          <div class="form-check">
+            <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="exampleRadios" id="directRadio" value="option1" />
+                                Самостійний переказ на наш рахунок
+                            </label>
+            <div class="collapse" id="directCollapse">
+              <div class="panel panel-default">
+                <div class="panel-body">
+                  <strong>Zahlungsempfänger:</strong><br> Ukrainisches Atelier für Kultur & Sport e. V.
+                  <br>
+                  <strong>IBAN:</strong> DE17600501010002857079<br>
+                  <strong>Kreditinstitut:</strong> BW Bank Stuttgart<br>
+                  <strong>Verwendungszweck (bspw.):</strong><br> Für satzungsgemäße Ziele / Zwecke<br>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="form-group row center-align">
+      <div class="col-lg-8 col-lg-offset-2">
+        <button type="submit" class="btn btn-primary">Замовити</button>
+        <div class="form-check">
+          <label class="form-check-label">
+            <f:form.checkbox property="invoice" value="1" class="form-check-input" /> Отримати довідку про переказ коштів
+          </label>
+        </div>
+      </div>
+    </div>
+    </f:form>
+  </div>
+
+  <script type="text/javascript">
+        $("input:radio[name ='exampleRadios']").change(function () {
+            if ($("#directRadio").is(":checked")) {
+                $('#directCollapse').collapse('show');
+            } else {
+                $('#directCollapse').collapse('hide');
+            }
+        });
+  </script>
+</f:section>
+
+</html>

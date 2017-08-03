@@ -1,0 +1,68 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Show" />
+<f:section name="main">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2">
+        <div class="modal-body">
+          <h2>{ausgabe.name}</h2>
+          <div id="flipbook">
+            <f:for each="{ausgabe.previewImages}" as="image">
+              <f:image src="{image.originalResource.publicUrl}" class="img-responsive img-centered" width="400" height="500" />
+            </f:for>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row left-align">
+      <div class="col-lg-3 col-lg-offset-3">
+        <div class="modal-body">
+          <h4>В номері:</h4>
+          <ul>
+            <f:for each="{contentList}" as="item">
+              <li>{item}</li>
+            </f:for>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <div class="modal-body">
+          <f:form action="download" arguments="{ausgabe: ausgabe}">
+          <div class="form-group">
+            <label for="price" style="float:left;margin-right:5px;">Підтримайте нас: €</label>
+            <div class="input-group">
+              <f:form.textfield name="money" type="number" class="form-control" style="height:20px;" id="price" placeholder="0+" />
+            </div>
+          </div>
+          <p>
+              <button id="downloadButton" type="submit" class="btn btn-primary"><i class="fa fa-arrow-circle-o-down"></i> Завантажити
+                <p>
+                  Розмір: {ausgabe.pdf.originalResource.originalFile.properties.size -> f:format.bytes()},
+                  Завантажено: {ausgabe.downloadCount} разів
+                </p>
+              </button>
+            <a id="pdfLink" href="fileadmin{ausgabe.pdf.originalResource.originalFile.identifier}" download hidden/>
+          </p>
+          </f:form>
+          <p>
+            <f:link.action action="new" controller="Order" arguments="{ausgabe: ausgabe}">
+              <button type="button" class="btn btn-primary">
+                <span class="magazine-icon"></span>Замовити ({ausgabe.price}€)
+                <p>Друкований примірник</p>
+                <p>Залишилось {ausgabe.amountLeft} шт.</p>
+              </button>
+            </f:link.action>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+        $("#downloadButton").click(function () {
+          document.getElementById('pdfLink').click();
+        });
+  </script>
+</f:section>
+
+</html>

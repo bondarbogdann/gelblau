@@ -1,0 +1,51 @@
+
+<f:layout name="Default" />
+
+This Template is responsible for creating a table of domain objects.
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        List.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="content">
+<h1>Listing for Ausgabe</h1>
+
+<f:flashMessages />
+
+<table  class="tx_gelblauausgabe" >
+	<tr>
+		<th><f:translate key="tx_gelblauausgabe_domain_model_ausgabe.name" /></th>
+		<th><f:translate key="tx_gelblauausgabe_domain_model_ausgabe.front_image" /></th>
+		<th><f:translate key="tx_gelblauausgabe_domain_model_ausgabe.date" /></th>
+		<th><f:translate key="tx_gelblauausgabe_domain_model_ausgabe.pdf" /></th>
+		<th><f:translate key="tx_gelblauausgabe_domain_model_ausgabe.content" /></th>
+		<th><f:translate key="tx_gelblauausgabe_domain_model_ausgabe.download_count" /></th>
+		<th><f:translate key="tx_gelblauausgabe_domain_model_ausgabe.amount_left" /></th>
+		<th><f:translate key="tx_gelblauausgabe_domain_model_ausgabe.preview_images" /></th>
+		<th> </th>
+		<th> </th>
+	</tr>
+
+	<f:for each="{ausgabes}" as="ausgabe">
+		<tr>
+			<td><f:link.action action="show" arguments="{ausgabe : ausgabe}"> {ausgabe.name}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{ausgabe : ausgabe}"> {ausgabe.frontImage.originalResource.name}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{ausgabe : ausgabe}"> {ausgabe.date -> f:format.date()}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{ausgabe : ausgabe}"> {ausgabe.pdf.originalResource.name}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{ausgabe : ausgabe}"> {ausgabe.content}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{ausgabe : ausgabe}"> {ausgabe.downloadCount}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{ausgabe : ausgabe}"> {ausgabe.amountLeft}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{ausgabe : ausgabe}"> {ausgabe.previewImages}</f:link.action></td>
+			<td><f:link.action action="edit" arguments="{ausgabe : ausgabe}">Edit</f:link.action></td>
+			<td><f:link.action action="delete" arguments="{ausgabe : ausgabe}">Delete</f:link.action></td>
+		</tr>
+		</f:for>
+</table>
+
+<f:link.action action="new">New Ausgabe</f:link.action>
+</f:section>

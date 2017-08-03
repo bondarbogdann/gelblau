@@ -1,0 +1,465 @@
+{
+    "tt_content": {
+        "elements": {
+            "gelblau_main_header": {
+                "label": "Gelblau Main Header",
+                "key": "gelblau_main_header",
+                "shortLabel": "",
+                "description": "",
+                "icon": "fa-header",
+                "color": "#000000",
+                "columns": [
+                    "header",
+                    "subheader",
+                    "image",
+                    "media"
+                ],
+                "labels": [
+                    "Header",
+                    "Intro text",
+                    "Background",
+                    "PDF"
+                ]
+            },
+            "gelblau_partners": {
+                "label": "Gelblau Partners",
+                "key": "gelblau_partners",
+                "shortLabel": "",
+                "description": "",
+                "icon": "fa-glass",
+                "color": "#000000",
+                "columns": [
+                    "header",
+                    "tx_mask_partners"
+                ],
+                "labels": [
+                    "Header",
+                    "Partners"
+                ],
+                "options": {
+                    "5": "rte"
+                }
+            },
+            "gelblau_team": {
+                "label": "Gelblau Team",
+                "key": "gelblau_team",
+                "shortLabel": "",
+                "description": "",
+                "icon": "fa-user",
+                "color": "#000000",
+                "columns": [
+                    "header",
+                    "tx_mask_members"
+                ],
+                "labels": [
+                    "Header",
+                    "Members"
+                ]
+            },
+            "gelblau_text": {
+                "label": "Gelblau Text",
+                "key": "gelblau_text",
+                "shortLabel": "",
+                "description": "",
+                "icon": "fa-text-width",
+                "color": "#000000",
+                "columns": [
+                    "header",
+                    "bodytext"
+                ],
+                "labels": [
+                    "Header",
+                    "Content"
+                ],
+                "options": {
+                    "1": "rte"
+                }
+            }
+        },
+        "sql": {
+            "tx_mask_partners": {
+                "tt_content": {
+                    "tx_mask_partners": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            },
+            "tx_mask_members": {
+                "tt_content": {
+                    "tx_mask_members": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            }
+        },
+        "tca": {
+            "tx_mask_partners": {
+                "config": {
+                    "type": "inline",
+                    "foreign_table": "--inlinetable--",
+                    "foreign_field": "parentid",
+                    "foreign_table_field": "parenttable",
+                    "foreign_sortby": "sorting",
+                    "appearance": {
+                        "enabledControls": {
+                            "dragdrop": "1"
+                        },
+                        "collapseAll": "1",
+                        "newRecordLinkTitle": "New Partner",
+                        "levelLinksPosition": "top",
+                        "useSortable": "1"
+                    },
+                    "minitems": "",
+                    "maxitems": ""
+                },
+                "exclude": "1",
+                "inlineLabel": "",
+                "inlineIcon": "",
+                "l10n_mode": "copy",
+                "key": "partners"
+            },
+            "tx_mask_members": {
+                "config": {
+                    "type": "inline",
+                    "foreign_table": "--inlinetable--",
+                    "foreign_field": "parentid",
+                    "foreign_table_field": "parenttable",
+                    "foreign_sortby": "sorting",
+                    "appearance": {
+                        "enabledControls": {
+                            "dragdrop": "1"
+                        },
+                        "collapseAll": "1",
+                        "newRecordLinkTitle": "",
+                        "levelLinksPosition": "top",
+                        "useSortable": "1"
+                    },
+                    "minitems": "",
+                    "maxitems": ""
+                },
+                "exclude": "1",
+                "inlineLabel": "",
+                "inlineIcon": "",
+                "l10n_mode": "copy",
+                "key": "members"
+            }
+        }
+    },
+    "sys_file_reference": {
+        "sql": {
+            "tx_mask_logo": {
+                "sys_file_reference": {
+                    "tx_mask_logo": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            },
+            "tx_mask_picture": {
+                "sys_file_reference": {
+                    "tx_mask_picture": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            }
+        }
+    },
+    "tx_mask_partners": {
+        "sql": {
+            "tx_mask_header": {
+                "tx_mask_partners": {
+                    "tx_mask_header": "tinytext"
+                }
+            },
+            "tx_mask_subheader": {
+                "tx_mask_partners": {
+                    "tx_mask_subheader": "tinytext"
+                }
+            },
+            "tx_mask_link": {
+                "tx_mask_partners": {
+                    "tx_mask_link": "tinytext"
+                }
+            },
+            "tx_mask_description": {
+                "tx_mask_partners": {
+                    "tx_mask_description": "text"
+                }
+            },
+            "tx_mask_logo": {
+                "tx_mask_partners": {
+                    "tx_mask_logo": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            }
+        },
+        "tca": {
+            "tx_mask_header": {
+                "config": {
+                    "type": "input",
+                    "eval": "",
+                    "default": "",
+                    "placeholder": "Name of the Partner",
+                    "size": "",
+                    "max": "",
+                    "is_in": ""
+                },
+                "exclude": "1",
+                "inlineParent": "tx_mask_partners",
+                "label": "Header",
+                "key": "header"
+            },
+            "tx_mask_subheader": {
+                "config": {
+                    "type": "input",
+                    "eval": "",
+                    "default": "",
+                    "placeholder": "Extended name of partner",
+                    "size": "",
+                    "max": "",
+                    "is_in": ""
+                },
+                "exclude": "1",
+                "inlineParent": "tx_mask_partners",
+                "label": "Subheader",
+                "key": "subheader"
+            },
+            "tx_mask_link": {
+                "config": {
+                    "type": "input",
+                    "renderType": "inputLink",
+                    "softref": "typolink",
+                    "fieldControl": {
+                        "linkPopup": {
+                            "options": {
+                                "title": "Link",
+                                "windowOpenParameters": "height=300,width=500,status=0,menubar=0,scrollbars=1",
+                                "blindLinkOptions": "file,mail,page,folder"
+                            }
+                        }
+                    },
+                    "eval": "",
+                    "default": "",
+                    "placeholder": "Link to partners website",
+                    "size": "",
+                    "wizards": {
+                        "link": {
+                            "params": {
+                                "allowedExtensions": ""
+                            }
+                        }
+                    }
+                },
+                "exclude": "1",
+                "inlineParent": "tx_mask_partners",
+                "label": "External link",
+                "key": "link"
+            },
+            "tx_mask_description": {
+                "config": {
+                    "type": "text",
+                    "eval": "",
+                    "richtextConfiguration": "default",
+                    "enableRichtext": "1",
+                    "cols": "",
+                    "rows": "",
+                    "default": "",
+                    "placeholder": "Description of the Partner",
+                    "max": ""
+                },
+                "exclude": "1",
+                "inlineParent": "tx_mask_partners",
+                "label": "Description",
+                "rte": "1",
+                "key": "description"
+            },
+            "tx_mask_logo": {
+                "exclude": "1",
+                "options": "file",
+                "l10n_mode": "copy",
+                "config": {
+                    "minitems": "",
+                    "maxitems": "",
+                    "filter": [
+                        {
+                            "parameters": {
+                                "allowedFileExtensions": ""
+                            }
+                        }
+                    ]
+                },
+                "inlineParent": "tx_mask_partners",
+                "label": "Logo",
+                "key": "logo"
+            }
+        }
+    },
+    "tx_mask_members": {
+        "sql": {
+            "tx_mask_name": {
+                "tx_mask_members": {
+                    "tx_mask_name": "tinytext"
+                }
+            },
+            "tx_mask_job": {
+                "tx_mask_members": {
+                    "tx_mask_job": "tinytext"
+                }
+            },
+            "tx_mask_picture": {
+                "tx_mask_members": {
+                    "tx_mask_picture": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            },
+            "tx_mask_own_site": {
+                "tx_mask_members": {
+                    "tx_mask_own_site": "tinytext"
+                }
+            },
+            "tx_mask_mail": {
+                "tx_mask_members": {
+                    "tx_mask_mail": "tinytext"
+                }
+            },
+            "tx_mask_facebook": {
+                "tx_mask_members": {
+                    "tx_mask_facebook": "tinytext"
+                }
+            }
+        },
+        "tca": {
+            "tx_mask_name": {
+                "config": {
+                    "type": "input",
+                    "eval": "required",
+                    "default": "",
+                    "placeholder": "",
+                    "size": "",
+                    "max": "",
+                    "is_in": ""
+                },
+                "exclude": "1",
+                "inlineParent": "tx_mask_members",
+                "label": "Name",
+                "key": "name"
+            },
+            "tx_mask_job": {
+                "config": {
+                    "type": "input",
+                    "eval": "required",
+                    "default": "",
+                    "placeholder": "",
+                    "size": "",
+                    "max": "",
+                    "is_in": ""
+                },
+                "exclude": "1",
+                "inlineParent": "tx_mask_members",
+                "label": "Job",
+                "key": "job"
+            },
+            "tx_mask_picture": {
+                "exclude": "1",
+                "options": "file",
+                "l10n_mode": "copy",
+                "config": {
+                    "minitems": "",
+                    "maxitems": "",
+                    "filter": [
+                        {
+                            "parameters": {
+                                "allowedFileExtensions": ""
+                            }
+                        }
+                    ]
+                },
+                "inlineParent": "tx_mask_members",
+                "label": "Picture",
+                "key": "picture"
+            },
+            "tx_mask_own_site": {
+                "config": {
+                    "type": "input",
+                    "renderType": "inputLink",
+                    "softref": "typolink",
+                    "fieldControl": {
+                        "linkPopup": {
+                            "options": {
+                                "title": "Link",
+                                "windowOpenParameters": "height=300,width=500,status=0,menubar=0,scrollbars=1",
+                                "blindLinkOptions": "file,mail,page,folder"
+                            }
+                        }
+                    },
+                    "eval": "",
+                    "default": "",
+                    "placeholder": "",
+                    "size": "",
+                    "wizards": {
+                        "link": {
+                            "params": {
+                                "allowedExtensions": ""
+                            }
+                        }
+                    }
+                },
+                "exclude": "1",
+                "inlineParent": "tx_mask_members",
+                "label": "Personal site",
+                "key": "own_site"
+            },
+            "tx_mask_mail": {
+                "config": {
+                    "type": "input",
+                    "renderType": "inputLink",
+                    "softref": "typolink",
+                    "fieldControl": {
+                        "linkPopup": {
+                            "options": {
+                                "title": "Link",
+                                "windowOpenParameters": "height=300,width=500,status=0,menubar=0,scrollbars=1",
+                                "blindLinkOptions": "file,page,folder,url"
+                            }
+                        }
+                    },
+                    "eval": "",
+                    "default": "",
+                    "placeholder": "",
+                    "size": "",
+                    "wizards": {
+                        "link": {
+                            "params": {
+                                "allowedExtensions": ""
+                            }
+                        }
+                    }
+                },
+                "exclude": "1",
+                "inlineParent": "tx_mask_members",
+                "label": "E-mail",
+                "key": "mail"
+            },
+            "tx_mask_facebook": {
+                "config": {
+                    "type": "input",
+                    "renderType": "inputLink",
+                    "softref": "typolink",
+                    "fieldControl": {
+                        "linkPopup": {
+                            "options": {
+                                "title": "Link",
+                                "windowOpenParameters": "height=300,width=500,status=0,menubar=0,scrollbars=1",
+                                "blindLinkOptions": "file,mail,page,folder"
+                            }
+                        }
+                    },
+                    "eval": "",
+                    "default": "",
+                    "placeholder": "",
+                    "size": "",
+                    "wizards": {
+                        "link": {
+                            "params": {
+                                "allowedExtensions": ""
+                            }
+                        }
+                    }
+                },
+                "exclude": "1",
+                "inlineParent": "tx_mask_members",
+                "label": "Facebook",
+                "key": "facebook"
+            }
+        }
+    }
+}
