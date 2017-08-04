@@ -99,6 +99,10 @@
   </div>
 
   <script type="text/javascript">
+        $(document).ready(function() {
+          $('ul.nav li.active').removeClass('active');
+        });
+        
         $("input:radio[name ='exampleRadios']").change(function () {
             if ($("#directRadio").is(":checked")) {
                 $('#directCollapse').collapse('show');
