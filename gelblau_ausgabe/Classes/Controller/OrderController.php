@@ -68,6 +68,6 @@ class OrderController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
     {
         $newOrder->setDate(new \DateTime());
         $this->orderRepository->add($newOrder);
-        $this->redirect('list', 'Ausgabe');
+        $this->redirect('list', 'Ausgabe', NULL, ['ordered' => true], 2);
     }
 }

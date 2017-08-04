@@ -29,13 +29,15 @@ class AusgabeController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
      * action list
      *
      * @param bool $downloaded
+     * @param bool $ordered
      * @return void
      */
-    public function listAction(bool $downloaded = false)
+    public function listAction(bool $downloaded = false, bool $ordered = false)
     {
         $ausgabes = $this->ausgabeRepository->findAll();
         $this->view->assign('ausgabes', $ausgabes);
         $this->view->assign('downloaded', $downloaded);
+        $this->view->assign('ordered', $ordered);
     }
 
     /**
@@ -63,7 +65,7 @@ class AusgabeController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
         
         $money = intval($this->request->getArgument('money'));
         if ($money > 0) {
-            $this->redirect('new', 'Order', NULL, ['money' => $money]);
+            $this->redirect('new', 'Order', NULL, ['money' => $money], 7);
         } else {
             $this->redirect('list', NULL, NULL, ['downloaded' => true]);
         }

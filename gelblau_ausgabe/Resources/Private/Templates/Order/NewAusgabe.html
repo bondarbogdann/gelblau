@@ -9,6 +9,7 @@
         <div class="modal-body">
           <h4>{newOrder.ausgabe.name}</h4>
           <f:image src="{newOrder.ausgabe.frontImage.originalResource.publicUrl}" class="img-responsive" width="130"/>
+          <div id="ausgabePrice" data-price="{newOrder.ausgabe.price}" hidden></div>
           <f:form.hidden property="ausgabe" value="{newOrder.ausgabe}" />
         </div>
       </div>
@@ -109,6 +110,14 @@
             } else {
                 $('#directCollapse').collapse('hide');
             }
+        });
+
+        $("#ausgabeAmount").change(function(){
+          var amount = +this.value;
+          var price = +$("#ausgabePrice").data("price");
+          if (amount >= 0){
+             $("#money").val(price*amount);
+          }
         });
   </script>
 </f:section>

@@ -2,7 +2,10 @@
 <f:layout name="List" />
 <f:section name="main">
     <f:if condition="{downloaded}">
-        <p class="alert alert-downloaded">Дякуємо, що завантажили наш часопис! Ви можете підтримати наш проект за наступним <f:link.action action="new" controller="Order">посиланням</f:link.action>, або переглянути інші випуски нижче.</p>
+        <p class="alert alert-downloaded">Дякуємо, що завантажили наш часопис! Ви можете підтримати наш проект за наступним <f:link.action action="new" controller="Order">посиланням</f:link.action>, або переглянути інші наші випуски нижче:</p>
+    </f:if>
+    <f:if condition="{ordered}">
+        <p class="alert alert-downloaded">Дякуємо, що підтримали наш часопис! Рекомендуємо переглянути інші наші випуски нижче:</p>
     </f:if>
     <f:for each="{ausgabes}" as="ausgabe">
 		<div class="col-md-4 col-sm-6 ausgabe-item">

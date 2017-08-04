@@ -37,7 +37,7 @@
       <div class="col-lg-4">
         <div class="modal-body">
           <div class="form-group row">
-            <label for="money" class="col-lg-5 col-form-label">Сума: €</label>
+            <label for="money" class="col-lg-3 col-form-label">Сума: €</label>
             <div class="col-lg-4">
               <f:form.textfield property="money" type="number" class="form-control" id="money" style="height:20px;"/>
             </div>
@@ -95,11 +95,6 @@
   </div>
 
   <script type="text/javascript">
-        $(document).ready(function() {
-          $('ul.nav li.active').removeClass('active');
-          $('#supportMenu').addClass('active');
-        });
-
         $("input:radio[name ='exampleRadios']").change(function () {
             if ($("#directRadio").is(":checked")) {
                 $('#directCollapse').collapse('show');
