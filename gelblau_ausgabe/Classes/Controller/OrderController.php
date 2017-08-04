@@ -50,6 +50,8 @@ class OrderController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
                 $newOrder->setMoney($ausgabe->getPrice());
                 $newOrder->setAusgabe($ausgabe);
                 $newOrder->setAusgabeAmount(1);
+
+                $this->view->setTemplatePathAndFilename('typo3conf/ext/gelblau_ausgabe/Resources/Private/Templates/Order/NewAusgabe.html');
             }
             
             $this->view->assign('newOrder', $newOrder);
