@@ -278,7 +278,7 @@
                 "actions": {
                     "controllerActionCombinations": "",
                     "noncacheableActions": "",
-                    "switchableActions": ""
+                    "switchableActions": "Ausgabe\nAusgabe->list; Ausgabe->show; Ausgabe->download; Order->new; Order->create;\nOrder\nOrder->new; Order->create;\n"
                 },
                 "key": "ausgabe",
                 "name": "Ausgabe"
@@ -301,7 +301,7 @@
         }
     ],
     "log": {
-        "last_modified": "2017-08-03 05:02",
+        "last_modified": "2017-08-04 11:40",
         "extension_builder_version": "8.6.0",
         "be_user": " (2)"
     }

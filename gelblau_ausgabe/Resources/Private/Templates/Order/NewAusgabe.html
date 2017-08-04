@@ -40,6 +40,9 @@
               <div class="col-lg-4">
                 <f:form.textfield property="ausgabeAmount" type="number" class="form-control" id="ausgabeAmount" style="height:20px;" />
               </div>
+              <div class="col-lg-2" data-left="{newOrder.ausgabe.amountLeft}" id="amountLeft">
+                /{newOrder.ausgabe.amountLeft}
+              </div>
             </div>
           <div class="form-group row">
             <label for="money" class="col-lg-5 col-form-label">Сума: €</label>
@@ -115,9 +118,16 @@
         $("#ausgabeAmount").change(function(){
           var amount = +this.value;
           var price = +$("#ausgabePrice").data("price");
-          if (amount >= 0){
-             $("#money").val(price*amount);
+          var left = +$("#amountLeft").data("left");
+          if (amount < 1) {
+            amount = 1;
+            this.value = 1;
           }
+          if (amount > left){
+            amount = left;
+            this.value = left;
+          }
+          $("#money").val(price*amount);
         });
   </script>
 </f:section>
