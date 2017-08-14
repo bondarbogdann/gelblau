@@ -1,13 +1,30 @@
 <nav id={f:if(condition: '{is_siteroot} == 1', then: 'mainNav', else: 'mainNavSub')}
 class="navbar navbar-default navbar-custom navbar-fixed-top">
  <div class="container">
+        <div class="dropdown">
+            <button data-toggle="dropdown">
+                <f:for each="{menuLanguage}" as="languageItem">
+                    <f:if condition="{languageItem.active}">
+                            <f:image src="EXT:gelblau/Resources/Public/Images/flag{languageItem.languageUid}.png" class="img-responsive"/> 
+                    </f:if>
+                </f:for>
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <f:for each="{menuLanguage}" as="languageItem">
+                    <f:if condition="{languageItem.active} == 0">
+                        <li><a href="{languageItem.link}"><f:image src="EXT:gelblau/Resources/Public/Images/flag{languageItem.languageUid}.png" class="img-responsive"/></a></li>
+                    </f:if>
+                </f:for>
+            </ul>
+        </div>
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header page-scroll">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                 <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
             </button>
             <f:link.page pageUid="1" class="navbar-brand page-scroll">
-                <f:image id="logoImg" src="EXT:gelblau/Resources/Public/Images/logo.png"/>
+                <f:image id="logoImg" src="EXT:gelblau/Resources/Public/Images/logo.png" class="img-responsive"/>
             </f:link.page>
         </div>
 

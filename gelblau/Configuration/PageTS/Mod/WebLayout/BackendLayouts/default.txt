@@ -2,6 +2,10 @@
 # BACKENDLAYOUT: DEFAULT
 #
 mod {
+    SHARED {
+        defaultLanguageFlag = ua
+	    defaultLanguageLabel = Ukrainian
+    }
     web_layout {
         BackendLayouts {
             gelblau_default {

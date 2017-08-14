@@ -785,5 +785,44 @@ body {
 .modal-body h4 {
   margin-top: 0;
 }
+.dropdown {
+  float: right;
+}
+.dropdown button{
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: white;
+}
+.dropdown button:hover{
+  color: #fec503;
+}
+.caret {
+  position: absolute;
+  left: 90%;
+  top: 45%;
+}
+.dropdown-menu {
+  min-width: 0px;
+  padding: 1px 6px;
+  border: none;
+  background: transparent;
+  box-shadow: none;
+}
+.dropdown-menu li {
+  padding: 0;
+}
+.dropdown-menu li a {
+  padding: 0 !important;
+  -moz-transition: all 0.1s;
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+}
+.dropdown-menu li a:hover {
+  background: transparent;
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
 
 
