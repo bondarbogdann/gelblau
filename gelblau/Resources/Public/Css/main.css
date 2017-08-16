@@ -787,6 +787,7 @@ body {
 }
 .dropdown {
   float: right;
+  margin-left: 10px;
 }
 .dropdown button{
   background-color: transparent;

@@ -12,6 +12,9 @@
             <trans-unit id="backend_layout.column.normal">
                 <source>Content</source>
             </trans-unit>
+             <trans-unit id="latest_ausgabe">
+                <source>Актуальний випуск</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>
