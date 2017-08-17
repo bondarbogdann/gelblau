@@ -47,14 +47,19 @@
                 "description": "",
                 "icon": "fa-user",
                 "color": "#000000",
-                "columns": [
-                    "header",
-                    "tx_mask_members"
-                ],
-                "labels": [
-                    "Header",
-                    "Members"
-                ]
+                "columns": {
+                    "0": "header",
+                    "1": "tx_mask_members",
+                    "8": "bodytext"
+                },
+                "labels": {
+                    "0": "Header",
+                    "1": "Members",
+                    "8": "Team Footer"
+                },
+                "options": {
+                    "8": "rte"
+                }
             },
             "gelblau_text": {
                 "label": "Gelblau Text",
@@ -77,43 +82,18 @@
             }
         },
         "sql": {
-            "tx_mask_partners": {
-                "tt_content": {
-                    "tx_mask_partners": "int(11) unsigned DEFAULT '0' NOT NULL"
-                }
-            },
             "tx_mask_members": {
                 "tt_content": {
                     "tx_mask_members": "int(11) unsigned DEFAULT '0' NOT NULL"
                 }
+            },
+            "tx_mask_partners": {
+                "tt_content": {
+                    "tx_mask_partners": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
             }
         },
         "tca": {
-            "tx_mask_partners": {
-                "config": {
-                    "type": "inline",
-                    "foreign_table": "--inlinetable--",
-                    "foreign_field": "parentid",
-                    "foreign_table_field": "parenttable",
-                    "foreign_sortby": "sorting",
-                    "appearance": {
-                        "enabledControls": {
-                            "dragdrop": "1"
-                        },
-                        "collapseAll": "1",
-                        "newRecordLinkTitle": "New Partner",
-                        "levelLinksPosition": "top",
-                        "useSortable": "1"
-                    },
-                    "minitems": "",
-                    "maxitems": ""
-                },
-                "exclude": "1",
-                "inlineLabel": "",
-                "inlineIcon": "",
-                "l10n_mode": "copy",
-                "key": "partners"
-            },
             "tx_mask_members": {
                 "config": {
                     "type": "inline",
@@ -128,16 +108,55 @@
                         "collapseAll": "1",
                         "newRecordLinkTitle": "",
                         "levelLinksPosition": "top",
-                        "useSortable": "1"
+                        "useSortable": "1",
+                        "showSynchronizationLink": "1",
+                        "showPossibleLocalizationRecords": "1",
+                        "showAllLocalizationLink": "1",
+                        "showRemovedLocalizationRecords": "1"
                     },
                     "minitems": "",
-                    "maxitems": ""
+                    "maxitems": "",
+                    "behaviour": {
+                        "localizeChildrenAtParentLocalization": "1"
+                    }
                 },
                 "exclude": "1",
                 "inlineLabel": "",
                 "inlineIcon": "",
                 "l10n_mode": "copy",
                 "key": "members"
+            },
+            "tx_mask_partners": {
+                "config": {
+                    "type": "inline",
+                    "foreign_table": "--inlinetable--",
+                    "foreign_field": "parentid",
+                    "foreign_table_field": "parenttable",
+                    "foreign_sortby": "sorting",
+                    "appearance": {
+                        "enabledControls": {
+                            "dragdrop": "1"
+                        },
+                        "collapseAll": "1",
+                        "newRecordLinkTitle": "New Partner",
+                        "levelLinksPosition": "top",
+                        "useSortable": "1",
+                        "showSynchronizationLink": "1",
+                        "showPossibleLocalizationRecords": "1",
+                        "showAllLocalizationLink": "1",
+                        "showRemovedLocalizationRecords": "1"
+                    },
+                    "minitems": "",
+                    "maxitems": "",
+                    "behaviour": {
+                        "localizeChildrenAtParentLocalization": "1"
+                    }
+                },
+                "exclude": "1",
+                "inlineLabel": "",
+                "inlineIcon": "",
+                "l10n_mode": "copy",
+                "key": "partners"
             }
         }
     },
@@ -152,135 +171,6 @@
                 "sys_file_reference": {
                     "tx_mask_picture": "int(11) unsigned DEFAULT '0' NOT NULL"
                 }
-            }
-        }
-    },
-    "tx_mask_partners": {
-        "sql": {
-            "tx_mask_header": {
-                "tx_mask_partners": {
-                    "tx_mask_header": "tinytext"
-                }
-            },
-            "tx_mask_subheader": {
-                "tx_mask_partners": {
-                    "tx_mask_subheader": "tinytext"
-                }
-            },
-            "tx_mask_link": {
-                "tx_mask_partners": {
-                    "tx_mask_link": "tinytext"
-                }
-            },
-            "tx_mask_description": {
-                "tx_mask_partners": {
-                    "tx_mask_description": "text"
-                }
-            },
-            "tx_mask_logo": {
-                "tx_mask_partners": {
-                    "tx_mask_logo": "int(11) unsigned DEFAULT '0' NOT NULL"
-                }
-            }
-        },
-        "tca": {
-            "tx_mask_header": {
-                "config": {
-                    "type": "input",
-                    "eval": "",
-                    "default": "",
-                    "placeholder": "Name of the Partner",
-                    "size": "",
-                    "max": "",
-                    "is_in": ""
-                },
-                "exclude": "1",
-                "inlineParent": "tx_mask_partners",
-                "label": "Header",
-                "key": "header"
-            },
-            "tx_mask_subheader": {
-                "config": {
-                    "type": "input",
-                    "eval": "",
-                    "default": "",
-                    "placeholder": "Extended name of partner",
-                    "size": "",
-                    "max": "",
-                    "is_in": ""
-                },
-                "exclude": "1",
-                "inlineParent": "tx_mask_partners",
-                "label": "Subheader",
-                "key": "subheader"
-            },
-            "tx_mask_link": {
-                "config": {
-                    "type": "input",
-                    "renderType": "inputLink",
-                    "softref": "typolink",
-                    "fieldControl": {
-                        "linkPopup": {
-                            "options": {
-                                "title": "Link",
-                                "windowOpenParameters": "height=300,width=500,status=0,menubar=0,scrollbars=1",
-                                "blindLinkOptions": "file,mail,page,folder"
-                            }
-                        }
-                    },
-                    "eval": "",
-                    "default": "",
-                    "placeholder": "Link to partners website",
-                    "size": "",
-                    "wizards": {
-                        "link": {
-                            "params": {
-                                "allowedExtensions": ""
-                            }
-                        }
-                    }
-                },
-                "exclude": "1",
-                "inlineParent": "tx_mask_partners",
-                "label": "External link",
-                "key": "link"
-            },
-            "tx_mask_description": {
-                "config": {
-                    "type": "text",
-                    "eval": "",
-                    "richtextConfiguration": "default",
-                    "enableRichtext": "1",
-                    "cols": "",
-                    "rows": "",
-                    "default": "",
-                    "placeholder": "Description of the Partner",
-                    "max": ""
-                },
-                "exclude": "1",
-                "inlineParent": "tx_mask_partners",
-                "label": "Description",
-                "rte": "1",
-                "key": "description"
-            },
-            "tx_mask_logo": {
-                "exclude": "1",
-                "options": "file",
-                "l10n_mode": "copy",
-                "config": {
-                    "minitems": "",
-                    "maxitems": "",
-                    "filter": [
-                        {
-                            "parameters": {
-                                "allowedFileExtensions": ""
-                            }
-                        }
-                    ]
-                },
-                "inlineParent": "tx_mask_partners",
-                "label": "Logo",
-                "key": "logo"
             }
         }
     },
@@ -377,7 +267,7 @@
                             "options": {
                                 "title": "Link",
                                 "windowOpenParameters": "height=300,width=500,status=0,menubar=0,scrollbars=1",
-                                "blindLinkOptions": "file,mail,page,folder"
+                                "blindLinkOptions": ""
                             }
                         }
                     },
@@ -408,7 +298,7 @@
                             "options": {
                                 "title": "Link",
                                 "windowOpenParameters": "height=300,width=500,status=0,menubar=0,scrollbars=1",
-                                "blindLinkOptions": "file,page,folder,url"
+                                "blindLinkOptions": ""
                             }
                         }
                     },
@@ -439,7 +329,7 @@
                             "options": {
                                 "title": "Link",
                                 "windowOpenParameters": "height=300,width=500,status=0,menubar=0,scrollbars=1",
-                                "blindLinkOptions": "file,mail,page,folder"
+                                "blindLinkOptions": ""
                             }
                         }
                     },
@@ -459,6 +349,135 @@
                 "inlineParent": "tx_mask_members",
                 "label": "Facebook",
                 "key": "facebook"
+            }
+        }
+    },
+    "tx_mask_partners": {
+        "sql": {
+            "tx_mask_header": {
+                "tx_mask_partners": {
+                    "tx_mask_header": "tinytext"
+                }
+            },
+            "tx_mask_subheader": {
+                "tx_mask_partners": {
+                    "tx_mask_subheader": "tinytext"
+                }
+            },
+            "tx_mask_link": {
+                "tx_mask_partners": {
+                    "tx_mask_link": "tinytext"
+                }
+            },
+            "tx_mask_description": {
+                "tx_mask_partners": {
+                    "tx_mask_description": "text"
+                }
+            },
+            "tx_mask_logo": {
+                "tx_mask_partners": {
+                    "tx_mask_logo": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            }
+        },
+        "tca": {
+            "tx_mask_header": {
+                "config": {
+                    "type": "input",
+                    "eval": "",
+                    "default": "",
+                    "placeholder": "Name of the Partner",
+                    "size": "",
+                    "max": "",
+                    "is_in": ""
+                },
+                "exclude": "1",
+                "inlineParent": "tx_mask_partners",
+                "label": "Header",
+                "key": "header"
+            },
+            "tx_mask_subheader": {
+                "config": {
+                    "type": "input",
+                    "eval": "",
+                    "default": "",
+                    "placeholder": "Extended name of partner",
+                    "size": "",
+                    "max": "",
+                    "is_in": ""
+                },
+                "exclude": "1",
+                "inlineParent": "tx_mask_partners",
+                "label": "Subheader",
+                "key": "subheader"
+            },
+            "tx_mask_link": {
+                "config": {
+                    "type": "input",
+                    "renderType": "inputLink",
+                    "softref": "typolink",
+                    "fieldControl": {
+                        "linkPopup": {
+                            "options": {
+                                "title": "Link",
+                                "windowOpenParameters": "height=300,width=500,status=0,menubar=0,scrollbars=1",
+                                "blindLinkOptions": ""
+                            }
+                        }
+                    },
+                    "eval": "",
+                    "default": "",
+                    "placeholder": "Link to partners website",
+                    "size": "",
+                    "wizards": {
+                        "link": {
+                            "params": {
+                                "allowedExtensions": ""
+                            }
+                        }
+                    }
+                },
+                "exclude": "1",
+                "inlineParent": "tx_mask_partners",
+                "label": "External link",
+                "key": "link"
+            },
+            "tx_mask_description": {
+                "config": {
+                    "type": "text",
+                    "eval": "",
+                    "richtextConfiguration": "default",
+                    "enableRichtext": "1",
+                    "cols": "",
+                    "rows": "",
+                    "default": "",
+                    "placeholder": "Description of the Partner",
+                    "max": ""
+                },
+                "exclude": "1",
+                "inlineParent": "tx_mask_partners",
+                "label": "Description",
+                "rte": "1",
+                "key": "description"
+            },
+            "tx_mask_logo": {
+                "exclude": "1",
+                "options": "file",
+                "l10n_mode": "copy",
+                "config": {
+                    "minitems": "",
+                    "maxitems": "",
+                    "filter": [
+                        {
+                            "parameters": {
+                                "allowedFileExtensions": ""
+                            }
+                        }
+                    ]
+                },
+                "inlineParent": "tx_mask_partners",
+                "label": "Logo",
+                "key": "logo"
             }
         }
     }

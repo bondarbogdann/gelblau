@@ -60,6 +60,48 @@
 			<trans-unit id="tx_gelblauausgabe_domain_model_order.ausgabe">
 				<source>Ausgabe</source>
 			</trans-unit>
+			<trans-unit id="ausgabe_content">
+				<source>В номері:</source>
+			</trans-unit>
+			<trans-unit id="ausgabe_support_us">
+				<source>Підтримайте нас: €</source>
+			</trans-unit>
+			<trans-unit id="ausgabe_download">
+				<source>Завантажити</source>
+			</trans-unit>
+			<trans-unit id="ausgabe_size">
+				<source>Розмір:</source>
+			</trans-unit>
+			<trans-unit id="ausgabe_downloaded">
+				<source>Завантажено:</source>
+			</trans-unit>
+			<trans-unit id="ausgabe_order">
+				<source>Замовити</source>
+			</trans-unit>
+			<trans-unit id="ausgabe_printed">
+				<source>Друкований примірник</source>
+			</trans-unit>
+			<trans-unit id="ausgabe_left">
+				<source>Залишилось:</source>
+			</trans-unit>
+			<trans-unit id="order_user_data">
+				<source>Ваші дані:</source>
+			</trans-unit>
+			<trans-unit id="order_user_name">
+				<source>Ім'я та Прізвище</source>
+			</trans-unit>
+			<trans-unit id="order_user_address">
+				<source>Адреса</source>
+			</trans-unit>
+			<trans-unit id="order_sum">
+				<source>Сума: €</source>
+			</trans-unit>
+			<trans-unit id="order_manuel_transfer">
+				<source>Самостійний переказ на наш рахунок</source>
+			</trans-unit>
+			<trans-unit id="order_receive_invoice">
+				<source>Отримати довідку про переказ коштів</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

@@ -17,4 +17,7 @@ namespace Gelblau\GelblauAusgabe\Domain\Repository;
  */
 class AusgabeRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
 {
-    }
+    protected $defaultOrderings = array(
+		'date' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING
+	);
+}

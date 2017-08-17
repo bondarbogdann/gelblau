@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="de" datatype="plaintext" original="messages" date="2017-08-04T23:40:04Z" product-name="gelblau_ausgabe">
+		<header/>
+		<body>
+			<trans-unit id="ausgabe_content">
+				<target>In dieser Ausgabe:</target>
+			</trans-unit>
+			<trans-unit id="ausgabe_support_us">
+				<target>Spende: €</target>
+			</trans-unit>
+			<trans-unit id="ausgabe_download">
+				<target>Herunterladen</target>
+			</trans-unit>
+			<trans-unit id="ausgabe_size">
+				<target>Größe:</target>
+			</trans-unit>
+			<trans-unit id="ausgabe_downloaded">
+				<target>Heruntergeladet:</target>
+			</trans-unit>
+			<trans-unit id="ausgabe_order">
+				<target>Bestellen</target>
+			</trans-unit>
+			<trans-unit id="ausgabe_printed">
+				<target>Gedruckte Kopie</target>
+			</trans-unit>
+			<trans-unit id="ausgabe_left">
+				<target>Betrag übrig:</target>
+			</trans-unit>
+			<trans-unit id="order_user_data">
+				<target>Ihre Daten:</target>
+			</trans-unit>
+			<trans-unit id="order_user_name">
+				<target>Vorname und Nachname</target>
+			</trans-unit>
+			<trans-unit id="order_user_address">
+				<target>Adresse</target>
+			</trans-unit>
+			<trans-unit id="order_sum">
+				<target>Summe: €</target>
+			</trans-unit>
+			<trans-unit id="order_manuel_transfer">
+				<target>Selbst auf unser Konto überweisen</target>
+			</trans-unit>
+			<trans-unit id="order_receive_invoice">
+				<target>Eine Spendenbescheinigung bekommen</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

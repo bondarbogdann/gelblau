@@ -9,6 +9,9 @@
              <trans-unit id="latest_ausgabe">
                 <target>Aktuelle Ausgabe</target>
             </trans-unit>
+            <trans-unit id="join_us">
+                <target>Nehmen Sie Teil!</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>

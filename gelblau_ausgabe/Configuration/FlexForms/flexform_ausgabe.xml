@@ -25,6 +25,24 @@
 							</config>
 						</TCEforms>
 					</switchableControllerActions>
+
+					<settings.intro>
+						<TCEforms>
+						<label>Support Intro Text</label>
+						<config>
+							<type>text</type>
+						</config>
+						</TCEforms>
+					</settings.intro>  
+
+					<settings.invoiceNotice>
+						<TCEforms>
+						<label>Invoice Info</label>
+						<config>
+							<type>text</type>
+						</config>
+						</TCEforms>
+					</settings.invoiceNotice>   
 				</el>
 			</ROOT>
 		</sDEF>

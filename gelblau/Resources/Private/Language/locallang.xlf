@@ -12,8 +12,11 @@
             <trans-unit id="backend_layout.column.normal">
                 <source>Content</source>
             </trans-unit>
-             <trans-unit id="latest_ausgabe">
+            <trans-unit id="latest_ausgabe">
                 <source>Актуальний випуск</source>
+            </trans-unit>
+            <trans-unit id="join_us">
+                <source>Долучайтеся!</source>
             </trans-unit>
         </body>
     </file>

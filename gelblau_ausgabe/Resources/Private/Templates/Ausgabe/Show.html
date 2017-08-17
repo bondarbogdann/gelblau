@@ -17,7 +17,7 @@
     <div class="row left-align">
       <div class="col-lg-3 col-lg-offset-3">
         <div class="modal-body">
-          <h4>В номері:</h4>
+          <h4><f:translate key="ausgabe_content" extensionName="gelblau_ausgabe" /></h4>
           <ul>
             <f:for each="{contentList}" as="item">
               <li>{item}</li>
@@ -29,17 +29,15 @@
         <div class="modal-body">
           <f:form action="download" arguments="{ausgabe: ausgabe}">
           <div class="form-group">
-            <label for="price" style="float:left;margin-right:5px;">Підтримайте нас: €</label>
+            <label for="price" style="float:left;margin-right:5px;"><f:translate key="ausgabe_support_us" extensionName="gelblau_ausgabe" /></label>
             <div class="input-group">
               <f:form.textfield name="money" type="number" class="form-control" style="height:20px;" id="price" placeholder="0+" />
             </div>
           </div>
           <p>
-              <button id="downloadButton" type="submit" class="btn btn-primary"><i class="fa fa-arrow-circle-o-down"></i> Завантажити
-                <p>
-                  Розмір: {ausgabe.pdf.originalResource.originalFile.properties.size -> f:format.bytes()},
-                  Завантажено: {ausgabe.downloadCount} разів
-                </p>
+              <button id="downloadButton" type="submit" class="btn btn-primary"><i class="fa fa-arrow-circle-o-down"></i> <f:translate key="ausgabe_download" extensionName="gelblau_ausgabe" />
+                <p><f:translate key="ausgabe_size" extensionName="gelblau_ausgabe" /> {ausgabe.pdf.originalResource.originalFile.properties.size -> f:format.bytes()}</p>
+                <p><f:translate key="ausgabe_downloaded" extensionName="gelblau_ausgabe" /> {ausgabe.downloadCount}</p>
               </button>
             <a id="pdfLink" href="fileadmin{ausgabe.pdf.originalResource.originalFile.identifier}" download hidden/>
           </p>
@@ -47,9 +45,9 @@
           <p>
             <f:link.action action="new" controller="Order" arguments="{ausgabe: ausgabe}">
               <button type="button" class="btn btn-primary">
-                <span class="magazine-icon"></span>Замовити ({ausgabe.price}€)
-                <p>Друкований примірник</p>
-                <p>Залишилось {ausgabe.amountLeft} шт.</p>
+                <span class="magazine-icon"></span><f:translate key="ausgabe_order" extensionName="gelblau_ausgabe" /> ({ausgabe.price}€)
+                <p><f:translate key="ausgabe_printed" extensionName="gelblau_ausgabe" /></p>
+                <p><f:translate key="ausgabe_left" extensionName="gelblau_ausgabe" /> {ausgabe.amountLeft}</p>
               </button>
             </f:link.action>
           </p>

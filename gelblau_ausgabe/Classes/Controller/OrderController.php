@@ -56,6 +56,10 @@ class OrderController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
             
             $this->view->assign('newOrder', $newOrder);
         }
+
+        $intro = $this->settings['intro'];
+        $this->view->assign('intro', explode("\n", $intro));
+        $this->view->assign('invoiceNotice', $this->settings['invoiceNotice']);
     }
 
     /**
