@@ -2,10 +2,10 @@
 <f:layout name="List" />
 <f:section name="main">
     <f:if condition="{downloaded}">
-        <p class="alert alert-downloaded">Дякуємо, що завантажили наш часопис! Ви можете підтримати наш проект за наступним <f:link.action action="new" controller="Order" pageUid="7">посиланням</f:link.action>, або переглянути інші наші випуски нижче:</p>
+        <p class="alert alert-downloaded"><f:translate key="order_downloaded_notice_1" extensionName="gelblau_ausgabe" /> <f:link.action action="new" controller="Order" pageUid="7"><f:translate key="order_downloaded_notice_2" extensionName="gelblau_ausgabe" /></f:link.action> <f:translate key="order_downloaded_notice_3" extensionName="gelblau_ausgabe" /></p>
     </f:if>
     <f:if condition="{ordered}">
-        <p class="alert alert-downloaded">Дякуємо, що підтримали наш часопис! Рекомендуємо переглянути інші наші випуски нижче:</p>
+        <p class="alert alert-downloaded"><f:translate key="order_ordered_notice" extensionName="gelblau_ausgabe" /></p>
     </f:if>
     <f:for each="{ausgabes}" as="ausgabe">
 		<div class="col-md-4 col-sm-6 ausgabe-item">

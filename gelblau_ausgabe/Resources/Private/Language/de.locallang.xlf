@@ -36,6 +36,9 @@
 			<trans-unit id="order_user_address">
 				<target>Adresse</target>
 			</trans-unit>
+			<trans-unit id="order_amount">
+				<target>Zahl:</target>
+			</trans-unit>
 			<trans-unit id="order_sum">
 				<target>Summe: €</target>
 			</trans-unit>
@@ -44,6 +47,18 @@
 			</trans-unit>
 			<trans-unit id="order_receive_invoice">
 				<target>Eine Spendenbescheinigung bekommen</target>
+			</trans-unit>
+			<trans-unit id="order_downloaded_notice_1">
+				<target>Danke, dass Sie unsere Magazine heruntergeladet haben! Sie können uns mit folgendem</target>
+			</trans-unit>
+			<trans-unit id="order_downloaded_notice_2">
+				<target>link</target>
+			</trans-unit>
+			<trans-unit id="order_downloaded_notice_3">
+				<target>unterstützen oder andere Ausgabe anschauen:</target>
+			</trans-unit>
+			<trans-unit id="order_ordered_notice">
+				<target>Danke, dass Sie uns unterstützt haben! Wir empfehlen Ihnen noch andere Ausgabe anschauen:</target>
 			</trans-unit>
 		</body>
 	</file>

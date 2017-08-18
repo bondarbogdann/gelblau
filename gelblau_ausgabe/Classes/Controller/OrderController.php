@@ -72,6 +72,32 @@ class OrderController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
     {
         $newOrder->setDate(new \DateTime());
         $this->orderRepository->add($newOrder);
+
+        $this->sendEmail($newOrder);
+
         $this->redirect('list', 'Ausgabe', NULL, ['ordered' => true], 2);
+    }
+
+    private function sendEmail($order){
+        $mail = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('TYPO3\\CMS\\Core\\Mail\\MailMessage');
+        $mail->setSubject('Gelblau Order/Donation on '.$order->getDate()->format('d/m/Y H:i'));
+        $mail->setFrom(array('red@gelblau.net' => 'Gelblau'));
+        $mail->setTo(array('red@gelblau.net' => 'Gelblau', $order->getClientEmail() => $order->getClientName()));
+        
+        $body = "Thank you for your donation!\n";
+        $body .= "Orders Data:\n";
+        $body .= " Money €: ".$order->getMoney()."\n";
+        $body .= " Receive Invoice: ".($order->getInvoice() === false ? "no" : "yes")."\n";
+        $body .= " Customer Email: ".$order->getClientEmail()."\n";
+        $body .= " Customer Name: ".$order->getClientName()."\n";
+        $body .= " Customer Address: ".$order->getClientAddress()."\n";
+        if ($order->getAusgabe() !== null){
+            $body .= " Magazine: ".$order->getAusgabe()->getName()."\n";
+            $body .= " Amount: ".$order->getAmount()."\n";
+        }
+        $mail->setBody($body);
+        // $mail->addPart('<q>Here is the message itself</q>', 'text/html');
+        // $mail->attach(Swift_Attachment::fromPath('my-document.pdf'));
+        $mail->send();
     }
 }

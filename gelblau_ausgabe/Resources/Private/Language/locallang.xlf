@@ -93,6 +93,9 @@
 			<trans-unit id="order_user_address">
 				<source>Адреса</source>
 			</trans-unit>
+			<trans-unit id="order_amount">
+				<source>Кількість:</source>
+			</trans-unit>
 			<trans-unit id="order_sum">
 				<source>Сума: €</source>
 			</trans-unit>
@@ -101,6 +104,18 @@
 			</trans-unit>
 			<trans-unit id="order_receive_invoice">
 				<source>Отримати довідку про переказ коштів</source>
+			</trans-unit>
+			<trans-unit id="order_downloaded_notice_1">
+				<source>Дякуємо, що завантажили наш часопис! Ви можете підтримати наш проект за наступним</source>
+			</trans-unit>
+			<trans-unit id="order_downloaded_notice_2">
+				<source>посиланням</source>
+			</trans-unit>
+			<trans-unit id="order_downloaded_notice_3">
+				<source>або переглянути інші наші випуски нижче:</source>
+			</trans-unit>
+			<trans-unit id="order_ordered_notice">
+				<source>Дякуємо, що підтримали наш часопис! Рекомендуємо переглянути інші наші випуски нижче:</source>
 			</trans-unit>
 		</body>
 	</file>
