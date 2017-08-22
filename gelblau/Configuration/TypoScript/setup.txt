@@ -203,3 +203,98 @@ config {
         locale_all = de_DE.UTF-8
     }
 [end]
+
+tt_content.gelblau_gelblau_main_header = FLUIDTEMPLATE
+tt_content.gelblau_gelblau_main_header {
+    layoutRootPaths.0 = EXT:gelblau/Resources/Private/Layouts/ContentElements/
+    partialRootPaths.0 = EXT:gelblau/Resources/Private/Partials/ContentElements/
+    templateRootPaths.0 = EXT:gelblau/Resources/Private/Templates/ContentElements/
+    templateName = GelblauMainHeader
+    dataProcessing.10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+    dataProcessing.10 {
+        if.isTrue.field = image
+        references {
+            fieldName = image
+            table = tt_content
+        }
+        as = data_image
+    }
+    dataProcessing.20 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+    dataProcessing.20 {
+        if.isTrue.field = media
+        references {
+            fieldName = media
+            table = tt_content
+        }
+        as = data_media
+    }
+}
+tt_content.gelblau_gelblau_partners = FLUIDTEMPLATE
+tt_content.gelblau_gelblau_partners {
+    layoutRootPaths.0 = EXT:gelblau/Resources/Private/Layouts/ContentElements/
+    partialRootPaths.0 = EXT:gelblau/Resources/Private/Partials/ContentElements/
+    templateRootPaths.0 = EXT:gelblau/Resources/Private/Templates/ContentElements/
+    templateName = GelblauPartners
+    dataProcessing.10 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
+    dataProcessing.10 {
+        if.isTrue.field = tx_gelblau_partners
+        table = tx_gelblau_partners
+        pidInList.field = pid
+        where = parentid=###uid### AND deleted=0 AND hidden=0
+        orderBy = sorting
+        markers {
+            uid.field = uid
+        }
+        as = data_tx_gelblau_partners
+    }
+dataProcessing.10 {
+        dataProcessing.10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+    dataProcessing.10 {
+        if.isTrue.field = tx_gelblau_logo
+        references {
+            fieldName = tx_gelblau_logo
+            table = tx_gelblau_partners
+        }
+        as = data_tx_gelblau_logo
+    }
+
+}
+}
+tt_content.gelblau_gelblau_team = FLUIDTEMPLATE
+tt_content.gelblau_gelblau_team {
+    layoutRootPaths.0 = EXT:gelblau/Resources/Private/Layouts/ContentElements/
+    partialRootPaths.0 = EXT:gelblau/Resources/Private/Partials/ContentElements/
+    templateRootPaths.0 = EXT:gelblau/Resources/Private/Templates/ContentElements/
+    templateName = GelblauTeam
+    dataProcessing.10 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
+    dataProcessing.10 {
+        if.isTrue.field = tx_gelblau_members
+        table = tx_gelblau_members
+        pidInList.field = pid
+        where = parentid=###uid### AND deleted=0 AND hidden=0
+        orderBy = sorting
+        markers {
+            uid.field = uid
+        }
+        as = data_tx_gelblau_members
+    }
+dataProcessing.10 {
+        dataProcessing.10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+    dataProcessing.10 {
+        if.isTrue.field = tx_gelblau_picture
+        references {
+            fieldName = tx_gelblau_picture
+            table = tx_gelblau_members
+        }
+        as = data_tx_gelblau_picture
+    }
+
+}
+}
+tt_content.gelblau_gelblau_text = FLUIDTEMPLATE
+tt_content.gelblau_gelblau_text {
+    layoutRootPaths.0 = EXT:gelblau/Resources/Private/Layouts/ContentElements/
+    partialRootPaths.0 = EXT:gelblau/Resources/Private/Partials/ContentElements/
+    templateRootPaths.0 = EXT:gelblau/Resources/Private/Templates/ContentElements/
+    templateName = GelblauText
+}

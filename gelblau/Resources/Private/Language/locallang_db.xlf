@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.0">
+  <file source-language="en" datatype="plaintext" original="messages" date="2017-08-21T15:40:27+02:00" product-name="gelblau">
+    <header/>
+    <body>
+      <trans-unit id="tx_gelblau_members" xml:space="preserve">
+        <source>tx_gelblau_members</source>
+      </trans-unit>
+      <trans-unit id="tx_gelblau_members.tx_gelblau_name" xml:space="preserve">
+        <source>Name</source>
+      </trans-unit>
+      <trans-unit id="tx_gelblau_members.tx_gelblau_job" xml:space="preserve">
+        <source>Job</source>
+      </trans-unit>
+      <trans-unit id="tx_gelblau_members.tx_gelblau_picture" xml:space="preserve">
+        <source>Picture</source>
+      </trans-unit>
+      <trans-unit id="tx_gelblau_members.tx_gelblau_own_site" xml:space="preserve">
+        <source>Personal site</source>
+      </trans-unit>
+      <trans-unit id="tx_gelblau_members.tx_gelblau_mail" xml:space="preserve">
+        <source>E-mail</source>
+      </trans-unit>
+      <trans-unit id="tx_gelblau_members.tx_gelblau_facebook" xml:space="preserve">
+        <source>Facebook</source>
+      </trans-unit>
+      <trans-unit id="tx_gelblau_partners" xml:space="preserve">
+        <source>tx_gelblau_partners</source>
+      </trans-unit>
+      <trans-unit id="tx_gelblau_partners.tx_gelblau_header" xml:space="preserve">
+        <source>Header</source>
+      </trans-unit>
+      <trans-unit id="tx_gelblau_partners.tx_gelblau_subheader" xml:space="preserve">
+        <source>Subheader</source>
+      </trans-unit>
+      <trans-unit id="tx_gelblau_partners.tx_gelblau_link" xml:space="preserve">
+        <source>External link</source>
+      </trans-unit>
+      <trans-unit id="tx_gelblau_partners.tx_gelblau_description" xml:space="preserve">
+        <source>Description</source>
+      </trans-unit>
+      <trans-unit id="tx_gelblau_partners.tx_gelblau_logo" xml:space="preserve">
+        <source>Logo</source>
+      </trans-unit>
+      <trans-unit id="tt_content.tx_gelblau_members" xml:space="preserve">
+        <source>Members</source>
+      </trans-unit>
+      <trans-unit id="tt_content.tx_gelblau_partners" xml:space="preserve">
+        <source>Partners</source>
+      </trans-unit>
+      <trans-unit id="tt_content.CType.div._gelblau_" xml:space="preserve">
+        <source>gelblau</source>
+      </trans-unit>
+      <trans-unit id="tt_content.CType.gelblau_gelblau_main_header" xml:space="preserve">
+        <source>Gelblau Main Header</source>
+      </trans-unit>
+      <trans-unit id="tt_content.CType.gelblau_gelblau_partners" xml:space="preserve">
+        <source>Gelblau Partners</source>
+      </trans-unit>
+      <trans-unit id="tt_content.CType.gelblau_gelblau_team" xml:space="preserve">
+        <source>Gelblau Team</source>
+      </trans-unit>
+      <trans-unit id="tt_content.CType.gelblau_gelblau_text" xml:space="preserve">
+        <source>Gelblau Text</source>
+      </trans-unit>
+      <trans-unit id="tt_content.l10n_source" xml:space="preserve">
+        <source>l10n_source</source>
+      </trans-unit>
+      <trans-unit id="tt_content.l18n_diffsource" xml:space="preserve">
+        <source>l18n_diffsource</source>
+      </trans-unit>
+      <trans-unit id="tt_content.tx_impexp_origuid" xml:space="preserve">
+        <source>tx_impexp_origuid</source>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.0">
+  <file source-language="en" datatype="plaintext" original="messages" date="2017-08-21T15:40:27+02:00" product-name="gelblau">
+    <header/>
+    <body>
+      <trans-unit id="wizards.newContentElement.gelblau_main_header_title" xml:space="preserve">
+        <source>Gelblau Main Header</source>
+      </trans-unit>
+      <trans-unit id="wizards.newContentElement.gelblau_main_header_description" xml:space="preserve">
+        <source></source>
+      </trans-unit>
+      <trans-unit id="wizards.newContentElement.gelblau_partners_title" xml:space="preserve">
+        <source>Gelblau Partners</source>
+      </trans-unit>
+      <trans-unit id="wizards.newContentElement.gelblau_partners_description" xml:space="preserve">
+        <source></source>
+      </trans-unit>
+      <trans-unit id="wizards.newContentElement.gelblau_team_title" xml:space="preserve">
+        <source>Gelblau Team</source>
+      </trans-unit>
+      <trans-unit id="wizards.newContentElement.gelblau_team_description" xml:space="preserve">
+        <source></source>
+      </trans-unit>
+      <trans-unit id="wizards.newContentElement.gelblau_text_title" xml:space="preserve">
+        <source>Gelblau Text</source>
+      </trans-unit>
+      <trans-unit id="wizards.newContentElement.gelblau_text_description" xml:space="preserve">
+        <source></source>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

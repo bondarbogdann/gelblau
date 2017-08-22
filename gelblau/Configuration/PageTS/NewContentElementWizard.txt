@@ -1,0 +1,37 @@
+mod.wizards.newContentElement.wizardItems.common {
+    elements {
+            gelblau_main_header {
+                iconIdentifier = tx_gelblau_gelblau_main_header
+                title = LLL:EXT:gelblau/Resources/Private/Language/locallang_db_new_content_el.xlf:wizards.newContentElement.gelblau_main_header_title
+                description = LLL:EXT:gelblau/Resources/Private/Language/locallang_db_new_content_el.xlf:wizards.newContentElement.gelblau_main_header_description
+                tt_content_defValues {
+                    CType = gelblau_gelblau_main_header
+                }
+            }
+            gelblau_partners {
+                iconIdentifier = tx_gelblau_gelblau_partners
+                title = LLL:EXT:gelblau/Resources/Private/Language/locallang_db_new_content_el.xlf:wizards.newContentElement.gelblau_partners_title
+                description = LLL:EXT:gelblau/Resources/Private/Language/locallang_db_new_content_el.xlf:wizards.newContentElement.gelblau_partners_description
+                tt_content_defValues {
+                    CType = gelblau_gelblau_partners
+                }
+            }
+            gelblau_team {
+                iconIdentifier = tx_gelblau_gelblau_team
+                title = LLL:EXT:gelblau/Resources/Private/Language/locallang_db_new_content_el.xlf:wizards.newContentElement.gelblau_team_title
+                description = LLL:EXT:gelblau/Resources/Private/Language/locallang_db_new_content_el.xlf:wizards.newContentElement.gelblau_team_description
+                tt_content_defValues {
+                    CType = gelblau_gelblau_team
+                }
+            }
+            gelblau_text {
+                iconIdentifier = tx_gelblau_gelblau_text
+                title = LLL:EXT:gelblau/Resources/Private/Language/locallang_db_new_content_el.xlf:wizards.newContentElement.gelblau_text_title
+                description = LLL:EXT:gelblau/Resources/Private/Language/locallang_db_new_content_el.xlf:wizards.newContentElement.gelblau_text_description
+                tt_content_defValues {
+                    CType = gelblau_gelblau_text
+                }
+            }
+    }
+    show := addToList(gelblau_main_header, gelblau_partners, gelblau_team, gelblau_text)
+}

@@ -1,0 +1,8 @@
+{processedRow.header}:<br/><br/>
+<f:for each="{processedRow.tx_gelblau_partners}" as="partner">
+    <f:if condition="{partner.tx_gelblau_logo}">
+        <f:image src="{partner.tx_gelblau_logo.0.uid}" treatIdAsReference="true" width="50" />
+    </f:if>
+    <strong>{partner.tx_gelblau_header}</strong>
+    <br/>
+</f:for>

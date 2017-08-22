@@ -1,0 +1,7 @@
+{processedRow.header}:<br/><br/>
+<f:for each="{processedRow.tx_gelblau_members}" as="member">
+    <f:image src="{member.tx_gelblau_picture.0.uid}" treatIdAsReference="true" width="50" />
+    <strong>{member.tx_gelblau_name}</strong>
+    <br/><br/>
+</f:for>
+<f:format.html parseFuncTSPath="lib.parseFunc_RTE">{processedRow.bodytext}</f:format.html>
