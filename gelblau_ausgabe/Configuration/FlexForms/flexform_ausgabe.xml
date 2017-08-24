@@ -15,7 +15,7 @@
 								<items>
 									<numIndex index="0">
 										<numIndex index="0">Ausgabe</numIndex>
-										<numIndex index="1">Ausgabe->list;Ausgabe->show;Ausgabe->download;Order->new;Order->create</numIndex>
+										<numIndex index="1">Ausgabe->list;Ausgabe->show;Ausgabe->download;Ausgabe->latest;Order->new;Order->create</numIndex>
 									</numIndex>
 									<numIndex index="1">
 										<numIndex index="0">Order</numIndex>

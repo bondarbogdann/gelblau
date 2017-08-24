@@ -58,6 +58,16 @@ page {
                 as = menuLanguage
             }
         }
+        variables {
+            logoImage = IMG_RESOURCE
+            logoImage {
+                file {
+                    import.data = levelmedia:-1, slide
+                    treatIdAsReference = 1
+                    import.listNum = 0
+                }
+            }
+        }
     }
 
     meta {
@@ -218,15 +228,6 @@ tt_content.gelblau_gelblau_main_header {
             table = tt_content
         }
         as = data_image
-    }
-    dataProcessing.20 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
-    dataProcessing.20 {
-        if.isTrue.field = media
-        references {
-            fieldName = media
-            table = tt_content
-        }
-        as = data_media
     }
 }
 tt_content.gelblau_gelblau_partners = FLUIDTEMPLATE

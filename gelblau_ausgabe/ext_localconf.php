@@ -9,7 +9,7 @@ call_user_func(
             'Gelblau.GelblauAusgabe',
             'Ausgabe',
             [
-                'Ausgabe' => 'list, show, download',
+                'Ausgabe' => 'list, show, download, latest',
                 'Order' => 'new, create'
             ],
             // non-cacheable actions

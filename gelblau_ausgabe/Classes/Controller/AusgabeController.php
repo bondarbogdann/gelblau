@@ -70,4 +70,15 @@ class AusgabeController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
             $this->redirect('list', NULL, NULL, ['downloaded' => true]);
         }
     }
+
+    /**
+     * action latestAusgabe
+     *
+     * @return void
+     */
+     public function latestAction()
+     {
+        $latest = $this->ausgabeRepository->findAll()->getFirst();
+        $this->redirect('show', NULL, NULL, ['ausgabe' => $latest]);
+     }
 }

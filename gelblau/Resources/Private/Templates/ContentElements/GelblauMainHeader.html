@@ -7,7 +7,7 @@
       <f:if condition="{data.header}">
       <div class="intro-heading">{data.header}</div>
       </f:if>
-      <a href="fileadmin{data.media.0.originalFile.identifier}" class="page-scroll btn btn-xl" target="_blank"><f:translate key="latest_ausgabe" extensionName="gelblau" /></a>
+      <f:link.action action="latest" controller="Ausgabe" extensionName="gelblauausgabe" pluginName="ausgabe" pageUid="2" class="page-scroll btn btn-xl"><f:translate key="latest_ausgabe" extensionName="gelblau" /></f:link.action>
     </div>
   </div>
 </header>

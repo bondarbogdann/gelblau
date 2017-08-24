@@ -65,6 +65,7 @@ $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl'] = array(
 							'download' => 'download',
 							'new' => 'new',
 							'create' => 'create',
+							'latest' => 'latest',
 						),
 						'noMatch' => 'bypass'
 					),
