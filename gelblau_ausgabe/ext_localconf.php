@@ -19,22 +19,29 @@ call_user_func(
             ]
         );
 
+        // Register plugin icon
+    $iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
+    $iconRegistry->registerIcon(
+        'ausgabe_icon',
+        \TYPO3\CMS\Core\Imaging\IconProvider\BitmapIconProvider::class,
+    ['source' => 'EXT:gelblau_ausgabe/Resources/Public/Icons/15905-200.png']
+    );
     // wizards
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
         'mod {
             wizards.newContentElement.wizardItems.plugins {
                 elements {
                     ausgabe {
-                        icon = ' . \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath('gelblau_ausgabe') . 'Resources/Public/Icons/user_plugin_ausgabe.svg
-                        title = LLL:EXT:gelblau_ausgabe/Resources/Private/Language/locallang_db.xlf:tx_gelblau_ausgabe_domain_model_ausgabe
-                        description = LLL:EXT:gelblau_ausgabe/Resources/Private/Language/locallang_db.xlf:tx_gelblau_ausgabe_domain_model_ausgabe.description
+                        iconIdentifier = ausgabe_icon
+                        title = LLL:EXT:gelblau_ausgabe/Resources/Private/Language/locallang_db.xlf:tx_gelblauausgabe_domain_model_ausgabe
+                        description = LLL:EXT:gelblau_ausgabe/Resources/Private/Language/locallang_db.xlf:tx_gelblauausgabe_domain_model_ausgabe.description
                         tt_content_defValues {
                             CType = list
                             list_type = gelblauausgabe_ausgabe
                         }
                     }
                 }
-                show = *
+                show = ausgabe
             }
        }'
     );

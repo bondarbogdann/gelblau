@@ -1,4 +1,5 @@
 mod.wizards.newContentElement.wizardItems.common {
+    header = Gelblau
     elements {
             gelblau_main_header {
                 iconIdentifier = tx_gelblau_gelblau_main_header
@@ -33,5 +34,9 @@ mod.wizards.newContentElement.wizardItems.common {
                 }
             }
     }
-    show := addToList(gelblau_main_header, gelblau_partners, gelblau_team, gelblau_text)
+    show = gelblau_main_header, gelblau_partners, gelblau_team, gelblau_text
 }
+
+mod.wizards.newContentElement.wizardItems.menu >
+mod.wizards.newContentElement.wizardItems.special >
+mod.wizards.newContentElement.wizardItems.forms >

@@ -74,6 +74,9 @@ $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl'] = array(
 					),
 					array(
 						'GETvar' => 'tx_gelblauausgabe_ausgabe[money]',
+					),
+					array(
+						'GETvar' => 'cHash',
 						'noMatch' => 'bypass'
 					),
 				),

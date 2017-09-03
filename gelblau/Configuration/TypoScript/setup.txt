@@ -141,21 +141,21 @@ page {
         bootstrap_css = EXT:gelblau/Resources/Public/Css/bootstrap.min.css
         font_awesome = EXT:gelblau/Resources/Public/Css/font_awesome/css/font-awesome.min.css
 
-        droid_font = https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic
-        montserrat_font = https://fonts.googleapis.com/css?family=Montserrat:400,700
-        kaushan_font = https://fonts.googleapis.com/css?family=Kaushan+Script
-        roboto_font = https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700
-        comfortaa_font = https://fonts.googleapis.com/css?family=Comfortaa
+        droid_font = EXT:gelblau/Resources/Public/Fonts/droid_font.css
+        montserrat_font = EXT:gelblau/Resources/Public/Fonts/montserrat_font.css
+        kaushan_font = EXT:gelblau/Resources/Public/Fonts/kaushan_font.css
+        roboto_font = EXT:gelblau/Resources/Public/Fonts/roboto_font.css
+        comfortaa_font = EXT:gelblau/Resources/Public/Fonts/comfortaa_font.css
         
         gelblau_css = EXT:gelblau/Resources/Public/Css/main.css
     }
-
+    
     includeJSLibs {
         jquery = EXT:gelblau/Resources/Public/JavaScript/jquery-3.2.1.min.js
-        bootstrap = EXT:gelblau/Resources/Public/JavaScript/bootstrap.min.js
     }
 
     includeJSFooter {
+        bootstrap = EXT:gelblau/Resources/Public/JavaScript/bootstrap.min.js
         gelblau_scripts = EXT:gelblau/Resources/Public/JavaScript/main.js
     }
 }
@@ -196,8 +196,7 @@ config {
     // Compression and Concatenation of CSS and JS Files
     compressJs = 0
     compressCss = 0
-    concatenateJs = 0
-    concatenateCss = 0
+    concatenateJsAndCss = 1
 
     sys_language_uid = 0
 	htmlTag_langKey  = ua
