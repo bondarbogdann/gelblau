@@ -265,7 +265,7 @@
             "skipGenerateDocumentationTemplate": false,
             "sourceLanguage": "en",
             "state": "alpha",
-            "targetVersion": "8.6.0-8.6.99",
+            "targetVersion": "8.7.0-8.7.99",
             "version": "1.0.0"
         },
         "extensionKey": "gelblau_ausgabe",
@@ -280,6 +280,7 @@
                     "noncacheableActions": "",
                     "switchableActions": "Ausgabe\nAusgabe->list; Ausgabe->show; Ausgabe->download; Order->new; Order->create;\nOrder\nOrder->new; Order->create;\n"
                 },
+                "description": "",
                 "key": "ausgabe",
                 "name": "Ausgabe"
             }
@@ -301,8 +302,8 @@
         }
     ],
     "log": {
-        "last_modified": "2017-08-04 11:40",
-        "extension_builder_version": "8.6.0",
+        "last_modified": "2017-09-04 03:21",
+        "extension_builder_version": "8.7.0",
         "be_user": " (2)"
     }
 }

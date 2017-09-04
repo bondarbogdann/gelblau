@@ -155,6 +155,10 @@ class AusgabeTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
      */
     public function getDownloadCountReturnsInitialValueForInt()
     {
+        self::assertSame(
+            0,
+            $this->subject->getDownloadCount()
+        );
     }
 
     /**
@@ -162,6 +166,13 @@ class AusgabeTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
      */
     public function setDownloadCountForIntSetsDownloadCount()
     {
+        $this->subject->setDownloadCount(12);
+
+        self::assertAttributeEquals(
+            12,
+            'downloadCount',
+            $this->subject
+        );
     }
 
     /**
@@ -169,6 +180,10 @@ class AusgabeTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
      */
     public function getAmountLeftReturnsInitialValueForInt()
     {
+        self::assertSame(
+            0,
+            $this->subject->getAmountLeft()
+        );
     }
 
     /**
@@ -176,6 +191,13 @@ class AusgabeTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
      */
     public function setAmountLeftForIntSetsAmountLeft()
     {
+        $this->subject->setAmountLeft(12);
+
+        self::assertAttributeEquals(
+            12,
+            'amountLeft',
+            $this->subject
+        );
     }
 
     /**
@@ -246,6 +268,10 @@ class AusgabeTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
      */
     public function getPriceReturnsInitialValueForInt()
     {
+        self::assertSame(
+            0,
+            $this->subject->getPrice()
+        );
     }
 
     /**
@@ -253,5 +279,12 @@ class AusgabeTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
      */
     public function setPriceForIntSetsPrice()
     {
+        $this->subject->setPrice(12);
+
+        self::assertAttributeEquals(
+            12,
+            'price',
+            $this->subject
+        );
     }
 }

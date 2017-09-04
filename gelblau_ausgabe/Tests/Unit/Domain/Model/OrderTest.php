@@ -53,6 +53,10 @@ class OrderTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
      */
     public function getMoneyReturnsInitialValueForInt()
     {
+        self::assertSame(
+            0,
+            $this->subject->getMoney()
+        );
     }
 
     /**
@@ -60,6 +64,13 @@ class OrderTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
      */
     public function setMoneyForIntSetsMoney()
     {
+        $this->subject->setMoney(12);
+
+        self::assertAttributeEquals(
+            12,
+            'money',
+            $this->subject
+        );
     }
 
     /**
@@ -92,6 +103,10 @@ class OrderTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
      */
     public function getAusgabeAmountReturnsInitialValueForInt()
     {
+        self::assertSame(
+            0,
+            $this->subject->getAusgabeAmount()
+        );
     }
 
     /**
@@ -99,6 +114,13 @@ class OrderTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
      */
     public function setAusgabeAmountForIntSetsAusgabeAmount()
     {
+        $this->subject->setAusgabeAmount(12);
+
+        self::assertAttributeEquals(
+            12,
+            'ausgabeAmount',
+            $this->subject
+        );
     }
 
     /**
