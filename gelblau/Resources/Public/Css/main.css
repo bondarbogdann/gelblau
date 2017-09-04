@@ -826,4 +826,10 @@ body {
   transform: scale(1.1);
 }
 
+.required:before{
+  content:"*";
+  position: absolute;
+  color:red;
+}
+
 

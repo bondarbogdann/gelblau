@@ -60,6 +60,9 @@
 			<trans-unit id="tx_gelblauausgabe_domain_model_order.ausgabe">
 				<source>Ausgabe</source>
 			</trans-unit>
+			<trans-unit id="ausgabe">
+				<source>Випуск </source>
+			</trans-unit>
 			<trans-unit id="ausgabe_content">
 				<source>В номері:</source>
 			</trans-unit>

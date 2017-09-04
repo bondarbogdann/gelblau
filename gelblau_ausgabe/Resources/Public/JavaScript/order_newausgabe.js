@@ -24,3 +24,7 @@ $(document).ready(function() {
     }
     $("#money").val(price*amount);
   });
+
+  $("#order_form").submit(function() {
+    if($('#paypalRadio').is(':checked')) {document.getElementById('paypalLink').click();}
+});

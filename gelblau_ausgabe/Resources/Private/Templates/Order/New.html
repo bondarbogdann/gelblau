@@ -12,22 +12,22 @@
         </h3>
       </div>
     </div>
-    <f:form action="create" object="{newOrder}" objectName="newOrder">
+    <f:form action="create" object="{newOrder}" objectName="newOrder" id="order_form">
     <div class="row left-align">
       <div class="col-lg-3 col-lg-offset-3">
         <div class="modal-body">
           <h4><f:translate key="order_user_data" extensionName="gelblau_ausgabe" /></h4>
-          <div class="form-group row">
+          <div class="form-group row required">
             <div class="col-lg-12">
               <f:form.textfield property="clientEmail" type="email" class="form-control" id="email" placeholder="Email" required="true"/>
             </div>
           </div>
-          <div class="form-group row">
+          <div class="form-group row" id="username_row">
             <div class="col-lg-12">
               <f:form.textfield property="clientName" type="text" class="form-control" id="name" placeholder="{f:translate(key: 'order_user_name', extensionName: 'gelblau_ausgabe')}" />
             </div>
           </div>
-          <div class="form-group row">
+          <div class="form-group row" id="useraddress_row">
             <div class="col-lg-12">
               <f:form.textfield property="clientAddress" type="text" class="form-control" id="address" placeholder="{f:translate(key: 'order_user_address', extensionName: 'gelblau_ausgabe')}" />
             </div>
@@ -44,24 +44,25 @@
               <f:form.textfield property="money" type="number" class="form-control" id="money" style="height:20px;"/>
             </div>
           </div>
-          <div class="form-check">
+          <!-- <div class="form-check">
             <label class="form-check-label">
                                 <input class="form-check-input" type="radio" name="exampleRadios" id="sofortRadio" value="option2" checked />
                                 <f:image src="EXT:gelblau_ausgabe/Resources/Public/Images/sofort.png" />
                             </label>
+          </div> -->
+          <div class="form-check">
+            <label class="form-check-label">
+              <input class="form-check-input" type="radio" name="paymentOptions" id="paypalRadio" value="option1" />
+              <f:image src="EXT:gelblau_ausgabe/Resources/Public/Images/paypal.png" />
+              <a id="paypalLink" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=7DC2HWJLMA3B4" target="_blank" hidden></a>
+            </label>
           </div>
           <div class="form-check">
             <label class="form-check-label">
-                                <input class="form-check-input" type="radio" name="exampleRadios" id="paypalRadio" value="option1" />
-                                <f:image src="EXT:gelblau_ausgabe/Resources/Public/Images/paypal.png" />
-                            </label>
-          </div>
-          <div class="form-check">
-            <label class="form-check-label">
-                                <input class="form-check-input" type="radio" name="exampleRadios" id="directRadio" value="option1" />
-                                <f:translate key="order_manuel_transfer" extensionName="gelblau_ausgabe" />
-                            </label>
-            <div class="collapse" id="directCollapse">
+              <input class="form-check-input" type="radio" name="paymentOptions" id="directRadio" value="option1" checked/>
+              <f:translate key="order_manuel_transfer" extensionName="gelblau_ausgabe" />
+            </label>
+            <div class="collapse in" id="directCollapse">
               <div class="panel panel-default">
                 <div class="panel-body">
                   <strong>Zahlungsempfänger:</strong><br> Ukrainisches Atelier für Kultur & Sport e. V.
@@ -78,7 +79,7 @@
     </div>
     <div class="form-group row center-align">
       <div class="col-lg-8 col-lg-offset-2">
-        <button type="submit" class="btn btn-primary"><f:translate key="ausgabe_order" extensionName="gelblau_ausgabe" /></button>
+        <button type="submit" class="btn btn-primary" id="order_button"><f:translate key="ausgabe_order" extensionName="gelblau_ausgabe" /></button>
         <div class="form-check">
           <label class="form-check-label">
             <f:form.checkbox property="invoice" value="1" class="form-check-input" id="invoice" /> 
@@ -96,7 +97,7 @@
       </div>
     </div>
   </div>
-
+   
   <script type="text/javascript" src="{f:uri.resource(path: 'JavaScript/order_new.js')}"></script>
 </f:section>
 

@@ -5,7 +5,7 @@
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2">
         <div class="modal-body">
-          <h2>{ausgabe.name}</h2>
+          <h2><f:translate key="ausgabe" extensionName="gelblau_ausgabe" />{ausgabe.name}</h2>
           <div id="flipbook">
             <f:for each="{ausgabe.previewImages}" as="image">
               <f:image src="{image.originalResource.publicUrl}" class="img-responsive img-centered" width="400" height="500" />
@@ -43,13 +43,26 @@
           </p>
           </f:form>
           <p>
-            <f:link.action action="new" controller="Order" arguments="{ausgabe: ausgabe}">
-              <button type="button" class="btn btn-primary">
-                <span class="magazine-icon"></span><f:translate key="ausgabe_order" extensionName="gelblau_ausgabe" /> ({ausgabe.price}€)
-                <p><f:translate key="ausgabe_printed" extensionName="gelblau_ausgabe" /></p>
-                <p><f:translate key="ausgabe_left" extensionName="gelblau_ausgabe" /> {ausgabe.amountLeft}</p>
-              </button>
-            </f:link.action>
+            <f:if condition="{ausgabe.amountLeft} > 0">
+              <f:then>
+                <f:link.action action="new" controller="Order" arguments="{ausgabe: ausgabe}">
+                  <button type="button" class="btn btn-primary">
+                    <span class="magazine-icon"></span><f:translate key="ausgabe_order" extensionName="gelblau_ausgabe" /> ({ausgabe.price}€)
+                    <p><f:translate key="ausgabe_printed" extensionName="gelblau_ausgabe" /></p>
+                    <p><f:translate key="ausgabe_left" extensionName="gelblau_ausgabe" /> {ausgabe.amountLeft}</p>
+                  </button>
+                </f:link.action>
+              </f:then>
+              <f:else>
+                <a>
+                  <button type="button" class="btn btn-primary" disabled>
+                      <span class="magazine-icon"></span><f:translate key="ausgabe_order" extensionName="gelblau_ausgabe" /> ({ausgabe.price}€)
+                      <p><f:translate key="ausgabe_printed" extensionName="gelblau_ausgabe" /></p>
+                      <p><f:translate key="ausgabe_left" extensionName="gelblau_ausgabe" /> {ausgabe.amountLeft}</p>
+                    </button>
+                </a>
+              </f:else>
+            </f:if>
           </p>
         </div>
       </div>

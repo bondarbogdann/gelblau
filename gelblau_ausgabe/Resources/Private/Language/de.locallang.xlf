@@ -3,6 +3,9 @@
 	<file source-language="de" datatype="plaintext" original="messages" date="2017-08-04T23:40:04Z" product-name="gelblau_ausgabe">
 		<header/>
 		<body>
+			<trans-unit id="ausgabe">
+				<target>Ausgabe </target>
+			</trans-unit>
 			<trans-unit id="ausgabe_content">
 				<target>In dieser Ausgabe:</target>
 			</trans-unit>
