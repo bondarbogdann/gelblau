@@ -46,13 +46,13 @@ $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['cms/layout/class.tx_cms_layout.php'][
 
 $GLOBALS['TYPO3_CONF_VARS']['FE']['pageNotFound_handling'] = '/404/';
 
-$GLOBALS['TYPO3_CONF_VARS']['BE']['compressionLevel'] = 9;
-$GLOBALS['TYPO3_CONF_VARS']['FE']['compressionLevel'] = 9;
+// $GLOBALS['TYPO3_CONF_VARS']['BE']['compressionLevel'] = 9;
+// $GLOBALS['TYPO3_CONF_VARS']['FE']['compressionLevel'] = 9;
 
-$GLOBALS['TYPO3_CONF_VARS']['SYS']['enableDeprecationLog'] = '0';
-$GLOBALS['TYPO3_CONF_VARS']['SYS']['syslogErrorReporting'] = '0';
-$GLOBALS['TYPO3_CONF_VARS']['SYS']['belogErrorReporting'] = '0';
-$GLOBALS['TYPO3_CONF_VARS']['SYS']['systemLogLevel'] = '4';
-$GLOBALS['TYPO3_CONF_VARS']['SYS']['sqlDebug'] = false;
-$GLOBALS['TYPO3_CONF_VARS']['SYS']['no_pconnect'] = '1';
-$GLOBALS['TYPO3_CONF_VARS']['BE']['versionNumberInFilename'] = '1';
+// $GLOBALS['TYPO3_CONF_VARS']['SYS']['enableDeprecationLog'] = '0';
+// $GLOBALS['TYPO3_CONF_VARS']['SYS']['syslogErrorReporting'] = '0';
+// $GLOBALS['TYPO3_CONF_VARS']['SYS']['belogErrorReporting'] = '0';
+// $GLOBALS['TYPO3_CONF_VARS']['SYS']['systemLogLevel'] = '4';
+// $GLOBALS['TYPO3_CONF_VARS']['SYS']['sqlDebug'] = false;
+// $GLOBALS['TYPO3_CONF_VARS']['SYS']['no_pconnect'] = '1';
+// $GLOBALS['TYPO3_CONF_VARS']['BE']['versionNumberInFilename'] = '1';

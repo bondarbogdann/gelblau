@@ -34,7 +34,7 @@ mod.wizards.newContentElement.wizardItems.common {
                 }
             }
     }
-    show = gelblau_main_header, gelblau_partners, gelblau_team, gelblau_text
+    show = text, gelblau_main_header, gelblau_partners, gelblau_team, gelblau_text
 }
 
 mod.wizards.newContentElement.wizardItems.menu >

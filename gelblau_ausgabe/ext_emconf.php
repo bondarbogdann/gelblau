@@ -16,7 +16,7 @@ $EM_CONF[$_EXTKEY] = [
     'category' => 'plugin',
     'author' => '',
     'author_email' => '',
-    'state' => 'alpha',
+    'state' => 'stable',
     'internal' => '',
     'uploadfolder' => '1',
     'createDirs' => '',
@@ -24,7 +24,7 @@ $EM_CONF[$_EXTKEY] = [
     'version' => '1.0.0',
     'constraints' => [
         'depends' => [
-            'typo3' => '8.6.0-8.6.99',
+            'typo3' => '8.7.0-8.7.99',
         ],
         'conflicts' => [],
         'suggests' => [],
