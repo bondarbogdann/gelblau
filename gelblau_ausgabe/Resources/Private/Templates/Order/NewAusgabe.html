@@ -5,9 +5,9 @@
 <div class="container">
   <f:form action="create" object="{newOrder}" objectName="newOrder" id="order_form">
     <div class="row left-align">
-      <div class="col-lg-3 col-lg-offset-2">
+      <div class="col-lg-3 col-lg-offset-1">
         <div class="modal-body">
-          <h4>{newOrder.ausgabe.name}</h4>
+          <h4><f:translate key="ausgabe" extensionName="gelblau_ausgabe" />{newOrder.ausgabe.name}</h4>
           <f:image src="{newOrder.ausgabe.frontImage.originalResource.publicUrl}" class="img-responsive" width="130"/>
           <div id="ausgabePrice" data-price="{newOrder.ausgabe.price}" hidden></div>
           <f:form.hidden property="ausgabe" value="{newOrder.ausgabe}" />

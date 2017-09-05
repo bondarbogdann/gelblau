@@ -154,6 +154,7 @@ fieldset[disabled] .btn-xl.active {
 .navbar-custom .navbar-brand {
   color: #fed136;
   font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive;
+  padding: 15px 0px 15px 10px;
 }
 .navbar-custom .navbar-brand:hover,
 .navbar-custom .navbar-brand:focus,
@@ -171,6 +172,7 @@ fieldset[disabled] .btn-xl.active {
   text-transform: uppercase;
   color: white;
   font-size: 12px;
+  margin-right: 0px;
 }
 .navbar-custom .navbar-toggle:hover,
 .navbar-custom .navbar-toggle:focus {
@@ -217,13 +219,17 @@ fieldset[disabled] .btn-xl.active {
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     transition: all 0.3s;
+    padding: 15px 0px 15px 10px;
   }
 
   .navbar-custom .navbar-nav > .active > a {
     border-radius: 3px;
   }
 
-  /*TODO:change to be in the vertical middle!!!*/
+  .navbar-right {
+    margin-right: 10px;
+  }
+
   #logoImg {
     margin-top: -5px;
   }
@@ -787,7 +793,7 @@ body {
 }
 .dropdown {
   float: right;
-  margin-left: 10px;
+  margin-left: 0px;
 }
 .dropdown button{
   background-color: transparent;
