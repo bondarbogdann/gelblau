@@ -35,35 +35,27 @@
             </div>
           </div>
           <p>
-              <button id="downloadButton" type="submit" class="btn btn-primary"><i class="fa fa-arrow-circle-o-down"></i> <f:translate key="ausgabe_download" extensionName="gelblau_ausgabe" />
+              <button id="downloadButton" type="submit" name="tx_gelblauausgabe_ausgabe[selected_action]" value="download" class="btn btn-primary"><i class="fa fa-arrow-circle-o-down"></i> <f:translate key="ausgabe_download" extensionName="gelblau_ausgabe" />
                 <p><f:translate key="ausgabe_size" extensionName="gelblau_ausgabe" /> {ausgabe.pdf.originalResource.originalFile.properties.size -> f:format.bytes()}</p>
                 <p><f:translate key="ausgabe_downloaded" extensionName="gelblau_ausgabe" /> {ausgabe.downloadCount}</p>
               </button>
-            <a id="pdfLink" href="fileadmin{ausgabe.pdf.originalResource.originalFile.identifier}" download hidden/>
+            <a id="pdfLink" href="fileadmin{ausgabe.pdf.originalResource.originalFile.identifier}" download hidden></a>
           </p>
-          </f:form>
           <p>
             <f:if condition="{ausgabe.amountLeft} > 0">
               <f:then>
-                <f:link.action action="new" controller="Order" arguments="{ausgabe: ausgabe}">
-                  <button type="button" class="btn btn-primary">
-                    <span class="magazine-icon"></span><f:translate key="ausgabe_order" extensionName="gelblau_ausgabe" /> ({ausgabe.price}€)
-                    <p><f:translate key="ausgabe_printed" extensionName="gelblau_ausgabe" /></p>
-                    <p><f:translate key="ausgabe_left" extensionName="gelblau_ausgabe" /> {ausgabe.amountLeft}</p>
-                  </button>
-                </f:link.action>
+                <button type="submit" name="tx_gelblauausgabe_ausgabe[selected_action]" value="order" class="btn btn-primary">
               </f:then>
               <f:else>
-                <a>
-                  <button type="button" class="btn btn-primary" disabled>
-                      <span class="magazine-icon"></span><f:translate key="ausgabe_order" extensionName="gelblau_ausgabe" /> ({ausgabe.price}€)
-                      <p><f:translate key="ausgabe_printed" extensionName="gelblau_ausgabe" /></p>
-                      <p><f:translate key="ausgabe_left" extensionName="gelblau_ausgabe" /> {ausgabe.amountLeft}</p>
-                    </button>
-                </a>
+                <button type="button" class="btn btn-primary" disabled>
               </f:else>
             </f:if>
+              <span class="magazine-icon"></span><f:translate key="ausgabe_order" extensionName="gelblau_ausgabe" />
+              <p><f:translate key="ausgabe_printed" extensionName="gelblau_ausgabe" /></p>
+              <p><f:translate key="ausgabe_left" extensionName="gelblau_ausgabe" /> {ausgabe.amountLeft}</p>
+            </button>
           </p>
+          </f:form>
         </div>
       </div>
     </div>

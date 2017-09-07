@@ -12,7 +12,7 @@ $(document).ready(function() {
 
   $("#ausgabeAmount").change(function(){
     var amount = +this.value;
-    var price = +$("#ausgabePrice").data("price");
+    //var price = +$("#ausgabePrice").data("price");
     var left = +$("#amountLeft").data("left");
     if (amount < 1) {
       amount = 1;
@@ -22,7 +22,7 @@ $(document).ready(function() {
       amount = left;
       this.value = left;
     }
-    $("#money").val(price*amount);
+    //$("#money").val(price*amount);
   });
 
   $("#order_form").submit(function() {

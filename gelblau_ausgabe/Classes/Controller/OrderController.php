@@ -47,7 +47,6 @@ class OrderController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
                 $ausgabeRepository = $objectManager->get(\Gelblau\GelblauAusgabe\Domain\Repository\AusgabeRepository::class);
                 $ausgabe = $ausgabeRepository->findByUid($this->request->getArgument('ausgabe'));
                 
-                $newOrder->setMoney($ausgabe->getPrice());
                 $newOrder->setAusgabe($ausgabe);
                 $newOrder->setAusgabeAmount(1);
 

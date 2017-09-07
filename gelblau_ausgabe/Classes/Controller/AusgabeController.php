@@ -60,14 +60,23 @@ class AusgabeController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
      */
     public function downloadAction(\Gelblau\GelblauAusgabe\Domain\Model\Ausgabe $ausgabe)
     {
-        $ausgabe->setDownloadCount($ausgabe->getDownloadCount() + 1);
-        $this->ausgabeRepository->update($ausgabe);
-        
+        $action = $this->request->getArgument('selected_action');
         $money = intval($this->request->getArgument('money'));
-        if ($money > 0) {
-            $this->redirect('new', 'Order', NULL, ['money' => $money], 7);
-        } else {
-            $this->redirect('list', NULL, NULL, ['downloaded' => true]);
+        if ($action === 'download'){
+            $ausgabe->setDownloadCount($ausgabe->getDownloadCount() + 1);
+            $this->ausgabeRepository->update($ausgabe);
+            
+            if ($money > 0) {
+                $this->redirect('new', 'Order', NULL, ['money' => $money], 7);
+            } else {
+                $this->redirect('list', NULL, NULL, ['downloaded' => true]);
+            }
+        } elseif ($action === 'order'){
+            if ($money > 0) {
+                $this->redirect('new', 'Order', NULL, ['ausgabe' => $ausgabe, 'money' => $money]);
+            } else {
+                $this->redirect('new', 'Order', NULL, ['ausgabe' => $ausgabe]);
+            }
         }
     }
 
