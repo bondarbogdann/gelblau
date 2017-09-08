@@ -15,7 +15,7 @@
       </div>
     </div>
     <div class="row left-align">
-      <div class="col-lg-3 col-lg-offset-3">
+      <div class="col-lg-3 col-lg-offset-3 col-sm-5 col-sm-offset-1">
         <div class="modal-body">
           <h4><f:translate key="ausgabe_content" extensionName="gelblau_ausgabe" /></h4>
           <ul>
@@ -25,13 +25,13 @@
           </ul>
         </div>
       </div>
-      <div class="col-lg-3">
+      <div class="col-lg-3 col-sm-5">
         <div class="modal-body">
           <f:form id="downloadForm" action="download" arguments="{ausgabe: ausgabe}">
           <div class="form-group">
-            <label for="price" style="float:left;margin-right:5px;"><f:translate key="ausgabe_support_us" extensionName="gelblau_ausgabe" /></label>
+            <label for="price" style="float:left;margin-right:5px;margin-top:5px;"><f:translate key="ausgabe_support_us" extensionName="gelblau_ausgabe" /></label>
             <div class="input-group">
-              <f:form.textfield name="money" type="number" class="form-control" style="height:20px;" id="price" placeholder="0+" />
+              <f:form.textfield name="money" type="number" class="form-control" id="price" placeholder="0+" />
             </div>
           </div>
           <p>
