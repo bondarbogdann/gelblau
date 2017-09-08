@@ -52,6 +52,39 @@ class AusgabeController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
         $this->view->assign('contentList', explode("\n", $ausgabe->getContent()));
     }
 
+    //  /**
+    //  * action downloadPdf
+    //  *
+    //  * @param \Gelblau\GelblauAusgabe\Domain\Model\Ausgabe $ausgabe
+    //  * @return void
+    //  */
+    //  public function downloadPdfAction(\Gelblau\GelblauAusgabe\Domain\Model\Ausgabe $ausgabe)
+    //  {
+    //     $file = $ausgabe->getPdf()->getOriginalResource()->getOriginalFile()->getPublicUrl();
+    //     $filename = $ausgabe->getPdf()->getOriginalResource()->getOriginalFile()->getName();
+    //     $fileLen = filesize($file);          
+    //     $cType = 'application/pdf'; 
+    //     $headers = array(
+    //         'Pragma'                    => 'public', 
+    //         'Expires'                   => 0, 
+    //         'Cache-Control'             => 'must-revalidate, post-check=0, pre-check=0',
+    //         'Cache-Control'             => 'public',
+    //         'Content-Description'       => 'File Transfer',
+    //         'Content-Type'              => 'application/pdf',
+    //         'Content-Disposition'       => 'attachment; filename="'. $filename .'"',
+    //         'Content-Transfer-Encoding' => 'binary', 
+    //         'Content-Length'            => $fileLen         
+    //                 );
+        
+    //     foreach($headers as $header => $data)
+    //         $this->response->setHeader($header, $data); 
+        
+    //     $this->response->sendHeaders();                 
+    //     @readfile($file);   
+         
+    //     exit();   
+    //  }
+
     /**
      * action download
      *

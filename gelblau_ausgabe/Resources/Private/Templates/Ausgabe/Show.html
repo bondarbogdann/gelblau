@@ -27,7 +27,7 @@
       </div>
       <div class="col-lg-3">
         <div class="modal-body">
-          <f:form action="download" arguments="{ausgabe: ausgabe}">
+          <f:form id="downloadForm" action="download" arguments="{ausgabe: ausgabe}">
           <div class="form-group">
             <label for="price" style="float:left;margin-right:5px;"><f:translate key="ausgabe_support_us" extensionName="gelblau_ausgabe" /></label>
             <div class="input-group">
@@ -35,11 +35,12 @@
             </div>
           </div>
           <p>
-              <button id="downloadButton" type="submit" name="tx_gelblauausgabe_ausgabe[selected_action]" value="download" class="btn btn-primary"><i class="fa fa-arrow-circle-o-down"></i> <f:translate key="ausgabe_download" extensionName="gelblau_ausgabe" />
+              <button id="downloadButton" type="submit" name="tx_gelblauausgabe_ausgabe[selected_action]" value="download" class="btn btn-primary" style="cursor: pointer;" onclick=""><i class="fa fa-arrow-circle-o-down"></i> <f:translate key="ausgabe_download" extensionName="gelblau_ausgabe" />
                 <p><f:translate key="ausgabe_size" extensionName="gelblau_ausgabe" /> {ausgabe.pdf.originalResource.originalFile.properties.size -> f:format.bytes()}</p>
                 <p><f:translate key="ausgabe_downloaded" extensionName="gelblau_ausgabe" /> {ausgabe.downloadCount}</p>
               </button>
-            <a id="pdfLink" href="fileadmin{ausgabe.pdf.originalResource.originalFile.identifier}" download hidden></a>
+            <a id="pdfLink" href="fileadmin{ausgabe.pdf.originalResource.originalFile.identifier}" style="cursor: pointer;" onclick="" download></a>
+            <!-- <f:link.action id="downloadLink" action="downloadPdf" arguments="{ausgabe: ausgabe}"></f:link.action> -->
           </p>
           <p>
             <f:if condition="{ausgabe.amountLeft} > 0">
@@ -60,7 +61,7 @@
       </div>
     </div>
   </div>
-
+     
   <script type="text/javascript" src="{f:uri.resource(path: 'JavaScript/ausgabe_show.js')}"></script>
 </f:section>
 
