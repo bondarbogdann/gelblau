@@ -18,7 +18,9 @@
 				<f:image src="{ausgabe.frontImage.originalResource.publicUrl}" class="img-responsive" />
 			</f:link.action>
             <div class="ausgabe-caption">
-                <h4><f:translate key="ausgabe" extensionName="gelblau_ausgabe" />{ausgabe.name}</h4>
+                <f:link.action action="show" arguments="{ausgabe: ausgabe}">
+                    <h4><f:translate key="ausgabe" extensionName="gelblau_ausgabe" />{ausgabe.name}</h4>
+                </f:link.action>
                 <p class="text-muted">{ausgabe.date -> f:format.date()}</p>
             </div>
         </div>

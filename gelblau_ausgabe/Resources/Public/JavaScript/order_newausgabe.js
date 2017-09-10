@@ -13,15 +13,15 @@ $(document).ready(function() {
   $("#ausgabeAmount").change(function(){
     var amount = +this.value;
     //var price = +$("#ausgabePrice").data("price");
-    var left = +$("#amountLeft").data("left");
+    //var left = +$("#amountLeft").data("left");
     if (amount < 1) {
       amount = 1;
       this.value = 1;
     }
-    if (amount > left){
-      amount = left;
-      this.value = left;
-    }
+    // if (amount > left){
+    //   amount = left;
+    //   this.value = left;
+    // }
     //$("#money").val(price*amount);
   });
 
