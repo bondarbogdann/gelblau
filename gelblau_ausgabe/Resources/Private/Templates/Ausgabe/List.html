@@ -2,7 +2,7 @@
 <f:layout name="List" />
 <f:section name="main">
     <f:if condition="{downloaded}">
-        <p class="alert alert-downloaded"><f:translate key="order_downloaded_notice_1" extensionName="gelblau_ausgabe" /> <f:link.action action="new" controller="Order" pageUid="7"><f:translate key="order_downloaded_notice_2" extensionName="gelblau_ausgabe" /></f:link.action> <f:translate key="order_downloaded_notice_3" extensionName="gelblau_ausgabe" /></p>
+        <p class="alert alert-downloaded"><f:translate key="order_downloaded_notice_1" extensionName="gelblau_ausgabe" /> <a href="mailto:info@gelblau.net">info@gelblau.net</a></p>
     </f:if>
     <f:if condition="{ordered}">
         <p class="alert alert-downloaded"><f:translate key="order_ordered_notice" extensionName="gelblau_ausgabe" /></p>

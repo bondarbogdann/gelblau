@@ -52,16 +52,10 @@
 				<target>Eine Spendenbescheinigung bekommen</target>
 			</trans-unit>
 			<trans-unit id="order_downloaded_notice_1">
-				<target>Danke, dass Sie unsere Magazine heruntergeladet haben! Sie können uns mit folgendem</target>
-			</trans-unit>
-			<trans-unit id="order_downloaded_notice_2">
-				<target>link</target>
-			</trans-unit>
-			<trans-unit id="order_downloaded_notice_3">
-				<target>unterstützen oder andere Ausgabe anschauen:</target>
+				<target>Download erfolgreich. Bei Fragen und Anmerkungen freuen wir uns auf Ihre E-Mail an</target>
 			</trans-unit>
 			<trans-unit id="order_ordered_notice">
-				<target>Danke, dass Sie uns unterstützt haben! Wir empfehlen Ihnen noch andere Ausgabe anschauen:</target>
+				<target>Danke für Ihre Unterstützung! Schauen Sie sich noch andere Ausgaben an:</target>
 			</trans-unit>
 		</body>
 	</file>
